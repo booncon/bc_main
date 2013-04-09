@@ -113,19 +113,30 @@ function initSmoothScroll() {
   });
 }
 function initContainerSizes() {
-  window_height = $(window).height();
-  $('.parallax_wrapper').height(window_height / 3);
-  $('.parallax_wrapper.welcome').height(window_height - $('#intro').height());
-  $('.parallax_wrapper.aside').height(window_height / 5);
-  $('.parallax_wrapper.divisions').height(window_height / 6);
-  doc_height = $(document).height();
+  //window_height = $(window).height();
+//  $('.parallax_wrapper').height(window_height / 3);
+  //$('.parallax_wrapper.welcome').height(window_height - $('#intro').height());
+ // $('.parallax_wrapper.aside').height(window_height / 5);
+  //$('.parallax_wrapper.divisions').height(window_height / 6);
+  //doc_height = $(document).height();
 }
+
+function menuSwap(scroll_pos) {
+  var offset = 100;
+  if (scroll_pos >= offset) {
+    $('.header-container.floating').addClass('shown');
+  } else {
+    $('.header-container.floating').removeClass('shown');
+  }
+}
+
 function initScrollListener() {
   "use strict";
   var $container, scrollUpdate;
   $container = $(window);
   scrollUpdate = function () {
-    parallaxScroll($container.scrollTop());
+    menuSwap($container.scrollTop());
+    //parallaxScroll($container.scrollTop());
   };
   $container.bind("touchmove", scrollUpdate).bind("scroll", scrollUpdate).trigger('scroll');
   $('.hover').hover(function(){
@@ -144,7 +155,7 @@ function initResizeActions() {
 $(document).ready(function () {
   "use strict";  
   initSmoothScroll();
-  initContainerSizes();
+  //initContainerSizes();
   initScrollListener();
   initResizeActions();
 });
