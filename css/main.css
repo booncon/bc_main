@@ -1,0 +1,579 @@
+@import url(normalize.min.css);
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+/* line 34, sass/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 38, sass/main.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  font: 19px/28px "ff-meta-web-pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 45, sass/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 50, sass/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 55, sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 64, sass/main.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 68, sass/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 74, sass/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+/* line 82, sass/main.scss */
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* line 87, sass/main.scss */
+.header-container {
+  padding: 16px;
+  background-color: #3b454f;
+  width: 100%;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+/* line 97, sass/main.scss */
+nav.main_menu {
+  padding-top: 6px;
+  width: 100%;
+}
+/* line 100, sass/main.scss */
+nav.main_menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 103, sass/main.scss */
+nav.main_menu ul li {
+  display: inline-block;
+  padding: 0 0 0 2%;
+}
+/* line 108, sass/main.scss */
+nav.main_menu a {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 4px 10px 0;
+}
+/* line 116, sass/main.scss */
+nav.main_menu a:before {
+  content: '#';
+}
+/* line 119, sass/main.scss */
+nav.main_menu a:hover, nav.main_menu a:visited {
+  color: #fff;
+}
+/* line 122, sass/main.scss */
+nav.main_menu a:hover {
+  text-decoration: none;
+  background-color: #ccc;
+  color: #fff;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+/* line 134, sass/main.scss */
+.main {
+  padding: 20px 0;
+}
+
+/* line 138, sass/main.scss */
+.main article h1 {
+  font-size: 2em;
+}
+
+/* line 142, sass/main.scss */
+.main aside {
+  padding: 0px 5% 10px;
+}
+
+/* line 146, sass/main.scss */
+.footer-container footer {
+  color: white;
+  padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+/* line 156, sass/main.scss */
+.ie7 .title {
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* line 165, sass/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "museo-slab", serif;
+}
+
+/* line 169, sass/main.scss */
+body {
+  border-top: 5px solid #3b454f;
+}
+
+/* line 173, sass/main.scss */
+.main_logo {
+  width: 200px;
+  float: left;
+}
+
+/* line 4, sass/main.scss */
+.welcome:after, .map:after {
+  background: rgba(10, 10, 10, 0.1) url(../gfx/stripe.png);
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 181, sass/main.scss */
+.parallax_wrapper {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 186, sass/main.scss */
+.parallax_wrapper.divisions {
+  height: 100px;
+}
+
+/* line 190, sass/main.scss */
+.parallax {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 195, sass/main.scss */
+.par_offset {
+  position: absolute;
+  width: 2px;
+  z-index: -1;
+}
+
+/* line 201, sass/main.scss */
+.main_slogan {
+  width: 80%;
+  margin: -6% -40%;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 80px;
+  font-family: "katarine-web", sans-serif;
+  font-style: italic;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 219, sass/main.scss */
+.scroll_notice {
+  position: absolute;
+  bottom: 40px;
+  font-size: 44px;
+  width: 100%;
+  text-align: center;
+  z-index: 6;
+}
+/* line 226, sass/main.scss */
+.scroll_notice a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "katarine-web", sans-serif;
+  font-style: italic;
+}
+
+/* line 234, sass/main.scss */
+.divisions_button {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+/* line 245, sass/main.scss */
+.divisions_button:hover:after {
+  background: none;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* line 251, sass/main.scss */
+.divisions_button.programming {
+  background-color: #22aeeb;
+  background-image: url(../img/rockets.png);
+}
+
+/* line 255, sass/main.scss */
+.divisions_button.design {
+  background-color: #EF5A59;
+  background-image: url(../img/pixels.png);
+}
+
+/* line 260, sass/main.scss */
+.panel {
+  float: left;
+  width: 25%;
+  height: 150px;
+  position: relative;
+  font-size: .8em;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+/* line 270, sass/main.scss */
+.panel .front {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+/* line 295, sass/main.scss */
+.panel.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+/* line 301, sass/main.scss */
+.panel .back {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateY(-180deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+/* line 325, sass/main.scss */
+.panel.flip .back {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* line 335, sass/main.scss */
+.pad {
+  position: absolute;
+  bottom: 4px;
+  background-color: #fff;
+  padding: 4px 8px 4px 0;
+}
+
+/* line 341, sass/main.scss */
+.pad h2 {
+  padding: 0 0 2px;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+}
+
+/* line 347, sass/main.scss */
+.pad h3 {
+  padding: 0;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+  /* ============
+      WIDE: Menu
+     ============ */
+  /* line 370, sass/main.scss */
+  .title {
+    float: left;
+  }
+
+  /* ============
+      WIDE: Main
+     ============ */
+  /* line 379, sass/main.scss */
+  .main article {
+    float: left;
+    width: 57%;
+  }
+
+  /* line 384, sass/main.scss */
+  .main aside {
+    float: right;
+    width: 28%;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  /* ===============
+      Maximal Width
+     =============== */
+  /* line 396, sass/main.scss */
+  .wrapper {
+    width: 1026px;
+    /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1480px) {
+  /* ===============
+      Maximal Width
+     =============== */
+  /* line 408, sass/main.scss */
+  .wrapper {
+    width: 1400px;
+    /* 1140px - 10% for margins */
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 417, sass/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 424, sass/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* line 431, sass/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 436, sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 448, sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 457, sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 462, sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 467, sass/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 471, sass/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 480, sass/main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 488, sass/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 492, sass/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 496, sass/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 506, sass/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 511, sass/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 516, sass/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 521, sass/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 525, sass/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 535, sass/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 541, sass/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
