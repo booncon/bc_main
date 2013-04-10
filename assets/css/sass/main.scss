@@ -30,7 +30,7 @@ $anim_dur_out: 0.6s;
 
 @mixin line-overlay($z-index: 99) {
   &:after {
-    background: rgba(10,10,10,0.10) url(../gfx/stripe.png);
+    background: rgba(230,230,230,0.10) url(../gfx/stripe_white.png);
     content: ' ';
     width: 100%;
     height: 100%;
@@ -165,7 +165,7 @@ body {
   font-size: 1.2em;
 }
 
-.welcome, .map {
+.welcome {
   @include line-overlay(4);
 }
 
@@ -179,11 +179,11 @@ body {
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
-  color: #fff;
-  text-shadow: 0 0 1px rgba(0,0,0,0.2);
+  color: #333;
+  text-shadow: 0 0 1px rgba(255,255,255,0.2);
   text-align: center;
   font-size: 72px;
-  font-weight: 800;
+  font-weight: 100;
   line-height: 80px;
   font-family: "katarine-web", sans-serif;
   font-style: italic;
@@ -298,7 +298,84 @@ body {
       @include transform(rotateX(0deg) rotateY(0deg));
     }
   }
-}  
+}
+
+
+.map {
+  background: url(../gfx/Helsinki.png) 50% 50%;
+  position: relative;
+  border-top: 1px solid #888;
+  .contact_wrap {
+    padding: 40px 0;
+    background-color: rgba(0,0,0,0.6);
+  }
+  .contact {
+    font-size: 2em;
+    font-family: $title_fonts;
+    color: #fff;
+    width: 60%;
+    float: right;
+    text-align: right;
+  }
+  .section_block {
+    margin: 0;
+  }
+  .title {
+    display: none;
+  }
+  .contact_title {
+    font-size: 1.8em;
+    margin: 0 0 0.4em;
+    font-weight: 800;
+  }
+  .contact_link {
+    color: $color_bc;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.4em;
+    @include transition(all 500ms ease-in-out);
+    &:hover {
+      opacity: 0.75;
+      @include transition(all 200ms ease-in-out);
+    }
+  }
+  .contact_phone {
+    font-weight: 800;
+    font-size: 1.1em;
+    text-align: right;
+  }
+  .job_link {
+    font-family: $title_fonts;
+    font-weight: 900;
+    font-size: 0.74em;
+    line-height: 1.5em;
+    display: inline-block;
+    background-color: $color_bc;
+    padding: 0.1em 0.6em 0;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.2em -0.2em 0.3em 0;
+    text-transform: uppercase;
+    @include transition(all 500ms ease-in-out);
+    &:hover {
+      @include transition(all 200ms ease-in-out);
+      opacity: 0.75;
+    }
+    span {
+      font-size: 0.74em;
+      line-height: 1.5em;
+    }
+  }
+  .contact_small {
+    font-size: 0.6em;
+    float: right;
+    padding-left: 4em;
+  }
+  .contact_social {
+    font-size: 0.6em;
+    float: right;
+  }
+}
 
 
 /* ==========================================================================
