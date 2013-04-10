@@ -14,9 +14,12 @@
 $body_fonts: "ff-meta-web-pro", sans-serif;
 $title_fonts: "proxima-nova",sans-serif;
 
+$color_body: #fff;
+$color_font: #333;
 $color_bc: #3b454f;
 $color_bc_r: #22aeeb;
 $color_bc_p: #e24b70;
+
 
 $anim_dur_in: 0.3s;
 $anim_dur_out: 0.6s;
@@ -46,20 +49,60 @@ $anim_dur_out: 0.6s;
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $title_fonts;
 }
 
+a {
+  @include transition(all $anim_dur_out);
+  &:hover {
+    @include transition(all $anim_dur_in);
+  }
+  &:active {
+   // @include transform(scale(0.96) rotateX(10deg));
+    //@include transform-style(preserve-3d);
+  }
+}
+
 body {
   font-family: $body_fonts;
+  line-height: 1.5;
+  background-color: $color_body;
+  color: $color_font;
+}
+
+#topbar {
+  margin-bottom: 1.2em; 
+  overflow: hidden;
+  background-color: $color_bc;
+  .lang_menu {
+    margin: 0em 2em;
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin: 0 0 0 1.4em;
+      a {
+        display: block;
+        height: 100%;
+        color: #fff;
+        font-size: 0.9em;
+        font-weight: 300;
+        padding: 0.1em 0.8em 0.2em;
+        text-decoration: none;
+        vertical-align: middle;
+        &.active, &:hover {
+          background-color: lighten($color_bc, 20%);
+        }
+      }
+    }
+  }
 }
 
 .header-container {
   margin-bottom: 1em;
   padding: 0.4em 0;
-  height: 4.4em;
+  height: 5.4em;
   .main_logo {
     height: 100%;
     padding: 0.498em 0;
@@ -79,10 +122,8 @@ body {
           font-family: $title_fonts;
           font-size: 1.2em;
           padding: 0.4em 0.8em;
-          @include transition(opacity $anim_dur_out);
           &:hover {
             opacity: 0.6;
-            @include transition(opacity $anim_dur_in);
           }
         }
       }
@@ -90,11 +131,12 @@ body {
   }
   &.floating {
     top: 0;
-    //display: none;
     opacity: 0;
+    height: 4.4em;
+    display: none;
     &.shown {
-      //display: block;
       opacity: 1;
+      display: block;
       @include transition(opacity 0.5s);
     }
     margin-bottom: 0;
@@ -115,33 +157,23 @@ body {
   }  
 }
 
+.section_title {
+  margin: 0 0 1em;
+}
 
-
-
-
-
+.normal_text {
+  font-size: 1.2em;
+}
 
 .welcome, .map {
   @include line-overlay(4);
 }
+
+
 .parallax_wrapper {
   height: 600px;
   overflow: hidden;
   position: relative;
-}
-.parallax_wrapper.divisions {
-  height: 100px;
-}
-
-.parallax {
-  width: 100%;
-  position: absolute;
-  -webkit-transform: translate3d(0,0,0);
-}
-.par_offset {
-  position: absolute;
-  width: 2px;
-  z-index: -1;
 }
 
 .main_slogan {
@@ -162,94 +194,108 @@ body {
   -webkit-transform: translate3d(0,0,0);
 }
 
+.link_buttons {
+  padding: 0;
+  @include clearfix;
+  li {
+    display: inline-block;    
+    height: 8em;
+    margin: 0;
+    padding: 0;
+    float: left;    
+    a {
+      text-indent: -9999px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 2em;
+      font-family: $title_fonts;
+      color: #fff;
+      display: block;
+      width: 100%;
+      height: 100%;
+      @include background-size(150px);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &.pixels {
+      width: 50%;
+      a {
+        background: $color_bc_p url(../gfx/logo_bc-pixels_invert.png) 50% 50% no-repeat;      
+      }
+    }
+    &.rockets {
+      width: 50%;
+      a {
+        background: $color_bc_r url(../gfx/logo_bc-rockets_invert.png) 50% 50% no-repeat;      
+      }
+    }
+    &.jobs {
+      width: 100%;
+      height: 6em;
+      a {
+        background: $color_bc url(../gfx/logo_bc-jobs_invert.png) 50% 50% no-repeat;      
+      }
+    }
+  }
+}
+
 .panel {
   float: left;
   width: 25%;
   height: 150px;
   position: relative;
   font-size: .8em;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
+  @include perspective(600px);
   cursor: pointer;
   margin-bottom: 10px;
-  .front {
+  .side {
     float: none;
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 900;
-    width: 100%;
+    left: 0;    
+    width: 96%;
     height: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center center; 
-
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-transform: rotateX(0deg) rotateY(0deg);
-    -moz-transform-style: preserve-3d;
-    -moz-backface-visibility: hidden;    
-    @include transition(all $anim_dur_out);
-  }
-
-  &.flip {
-    .front {
-      z-index: 900;
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-    }
-  }
-  .back {
-    float: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 800;
-    width: 100%;
-    height: 100%;
-    
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     background-position: center center;
-    
-    -webkit-transform: rotateY(-180deg);
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-transform: rotateY(-180deg);
-    -moz-transform-style: preserve-3d;
-    -moz-backface-visibility: hidden;
-    @include transition(all $anim_dur_out);
-
-    .pad {    
-      position: absolute;
-      bottom: 4px;
-      background-color: #fff;
-      padding: 4px 8px 4px 0;
-      h2 {
-        padding: 0 0 2px;  
-        font-size: 14px;
-        line-height: 14px;
-        margin: 0;
-      }  
-      h3 {
-        padding: 0;
-        font-size: 12px;
-        line-height: 12px;
-        margin: 0;
+    @include transform(rotateX(0deg) rotateY(0deg));
+    @include transform-style(preserve-3d);
+    @include background-size(cover);
+    @include backface-visibility(hidden);
+    @include transition(all $anim_dur_out);    
+    &.front {
+      z-index: 900;
+    }
+    &.back {
+      z-index: 800;
+      @include transform(rotateY(-180deg));
+      .pad {    
+        position: absolute;
+        bottom: 4px;
+        background-color: #fff;
+        padding: 4px 8px 4px 0;
+        h2 {
+          padding: 0 0 2px;  
+          font-size: 14px;
+          line-height: 14px;
+          margin: 0;
+        }  
+        h3 {
+          padding: 0;
+          font-size: 12px;
+          line-height: 12px;
+          margin: 0;
+        }
       }
     }
   }
   &.flip {
+    .front {
+      z-index: 900;
+      @include transform(rotateY(180deg));
+    }
     .back {
       z-index: 1000;
-      -webkit-transform: rotateX(0deg) rotateY(0deg);
-      -moz-transform: rotateX(0deg) rotateY(0deg);
+      @include transform(rotateX(0deg) rotateY(0deg));
     }
   }
 }  

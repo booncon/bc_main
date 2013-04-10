@@ -1,9 +1,6 @@
 /* line 10, sass/_responsive_layout.scss */
 .main-container {
-  *position: relative;
-  *zoom: 1;
   overflow: hidden;
-  *zoom: 1;
   width: 80%;
   margin: 0 auto;
 }
@@ -17,36 +14,50 @@
   clear: both;
 }
 
-/* line 18, sass/_responsive_layout.scss */
+/* line 17, sass/_responsive_layout.scss */
+.content_section {
+  margin-top: 4em;
+}
+
+/* line 22, sass/_responsive_layout.scss */
 .main {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  _display: inline;
-  _overflow: hidden;
-  _overflow-y: visible;
   float: left;
   width: 71.42857%;
   margin-left: 0%;
   margin-right: -71.42857%;
 }
 
-/* line 23, sass/_responsive_layout.scss */
-aside {
-  padding-left: 5px;
-  padding-right: 5px;
+/* line 26, sass/_responsive_layout.scss */
+.main_full {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  _display: inline;
-  _overflow: hidden;
-  _overflow-y: visible;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+}
+
+/* line 31, sass/_responsive_layout.scss */
+aside {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
   float: left;
   width: 28.57143%;
   margin-left: 71.42857%;
@@ -591,73 +602,118 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* line 47, sass/main.scss */
+/* line 50, sass/main.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 51, sass/main.scss */
+/* line 52, sass/main.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", sans-serif;
 }
 
-/* line 55, sass/main.scss */
-body {
-  font-family: "ff-meta-web-pro", sans-serif;
+/* line 56, sass/main.scss */
+a {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+/* line 58, sass/main.scss */
+a:hover {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-/* line 59, sass/main.scss */
+/* line 67, sass/main.scss */
+body {
+  font-family: "ff-meta-web-pro", sans-serif;
+  line-height: 1.5;
+  background-color: white;
+  color: #333333;
+}
+
+/* line 74, sass/main.scss */
+#topbar {
+  margin-bottom: 1.2em;
+  overflow: hidden;
+  background-color: #3b454f;
+}
+/* line 78, sass/main.scss */
+#topbar .lang_menu {
+  margin: 0em 2em;
+  float: right;
+  list-style: none;
+}
+/* line 82, sass/main.scss */
+#topbar .lang_menu li {
+  float: left;
+  margin: 0 0 0 1.4em;
+}
+/* line 85, sass/main.scss */
+#topbar .lang_menu li a {
+  display: block;
+  height: 100%;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 300;
+  padding: 0.1em 0.8em 0.2em;
+  text-decoration: none;
+  vertical-align: middle;
+}
+/* line 94, sass/main.scss */
+#topbar .lang_menu li a.active, #topbar .lang_menu li a:hover {
+  background-color: #677889;
+}
+
+/* line 102, sass/main.scss */
 .header-container {
   margin-bottom: 1em;
   padding: 0.4em 0;
-  height: 4.4em;
+  height: 5.4em;
 }
-/* line 63, sass/main.scss */
+/* line 106, sass/main.scss */
 .header-container .main_logo {
   height: 100%;
   padding: 0.498em 0;
   float: left;
 }
-/* line 68, sass/main.scss */
+/* line 111, sass/main.scss */
 .header-container .main_menu {
   float: right;
 }
-/* line 70, sass/main.scss */
+/* line 113, sass/main.scss */
 .header-container .main_menu ul {
   height: 100%;
   padding: 0;
 }
-/* line 73, sass/main.scss */
+/* line 116, sass/main.scss */
 .header-container .main_menu ul li {
   display: inline-block;
   margin: 0 0 0 0.6em;
 }
-/* line 76, sass/main.scss */
+/* line 119, sass/main.scss */
 .header-container .main_menu ul li a {
   color: #111;
   text-decoration: none;
   font-family: "proxima-nova", sans-serif;
   font-size: 1.2em;
   padding: 0.4em 0.8em;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
 }
-/* line 83, sass/main.scss */
+/* line 125, sass/main.scss */
 .header-container .main_menu ul li a:hover {
   opacity: 0.6;
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
-/* line 91, sass/main.scss */
+/* line 132, sass/main.scss */
 .header-container.floating {
   top: 0;
   opacity: 0;
+  height: 4.4em;
+  display: none;
   margin-bottom: 0;
   position: fixed;
   width: 100%;
@@ -668,20 +724,31 @@ body {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 95, sass/main.scss */
+/* line 137, sass/main.scss */
 .header-container.floating.shown {
   opacity: 1;
+  display: block;
   -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 109, sass/main.scss */
+/* line 151, sass/main.scss */
 .header-container.floating .main_menu ul li a {
   color: #fff;
 }
 
-/* line 29, sass/main.scss */
+/* line 160, sass/main.scss */
+.section_title {
+  margin: 0 0 1em;
+}
+
+/* line 164, sass/main.scss */
+.normal_text {
+  font-size: 1.2em;
+}
+
+/* line 32, sass/main.scss */
 .welcome:after, .map:after {
   background: rgba(10, 10, 10, 0.1) url(../gfx/stripe.png);
   content: ' ';
@@ -695,33 +762,14 @@ body {
   right: 0;
 }
 
-/* line 127, sass/main.scss */
+/* line 173, sass/main.scss */
 .parallax_wrapper {
   height: 600px;
   overflow: hidden;
   position: relative;
 }
 
-/* line 132, sass/main.scss */
-.parallax_wrapper.divisions {
-  height: 100px;
-}
-
-/* line 136, sass/main.scss */
-.parallax {
-  width: 100%;
-  position: absolute;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-/* line 141, sass/main.scss */
-.par_offset {
-  position: absolute;
-  width: 2px;
-  z-index: -1;
-}
-
-/* line 147, sass/main.scss */
+/* line 179, sass/main.scss */
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
@@ -740,7 +788,66 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 165, sass/main.scss */
+/* line 197, sass/main.scss */
+.link_buttons {
+  padding: 0;
+  overflow: hidden;
+}
+/* line 200, sass/main.scss */
+.link_buttons li {
+  display: inline-block;
+  height: 8em;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+/* line 206, sass/main.scss */
+.link_buttons li a {
+  text-indent: -9999px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2em;
+  font-family: "proxima-nova", sans-serif;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: 150px;
+  -moz-background-size: 150px;
+  -o-background-size: 150px;
+  background-size: 150px;
+}
+/* line 217, sass/main.scss */
+.link_buttons li a:hover {
+  opacity: 0.8;
+}
+/* line 221, sass/main.scss */
+.link_buttons li.pixels {
+  width: 50%;
+}
+/* line 223, sass/main.scss */
+.link_buttons li.pixels a {
+  background: #e24b70 url(../gfx/logo_bc-pixels_invert.png) 50% 50% no-repeat;
+}
+/* line 227, sass/main.scss */
+.link_buttons li.rockets {
+  width: 50%;
+}
+/* line 229, sass/main.scss */
+.link_buttons li.rockets a {
+  background: #22aeeb url(../gfx/logo_bc-rockets_invert.png) 50% 50% no-repeat;
+}
+/* line 233, sass/main.scss */
+.link_buttons li.jobs {
+  width: 100%;
+  height: 6em;
+}
+/* line 236, sass/main.scss */
+.link_buttons li.jobs a {
+  background: #3b454f url(../gfx/logo_bc-jobs_invert.png) 50% 50% no-repeat;
+}
+
+/* line 243, sass/main.scss */
 .panel {
   float: left;
   width: 25%;
@@ -749,91 +856,96 @@ body {
   font-size: .8em;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 175, sass/main.scss */
-.panel .front {
+/* line 252, sass/main.scss */
+.panel .side {
   float: none;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 900;
-  width: 100%;
+  width: 96%;
   height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   background-position: center center;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
   -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -moz-backface-visibility: hidden;
-  -webkit-transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
-}
-/* line 200, sass/main.scss */
-.panel.flip .front {
-  z-index: 900;
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-}
-/* line 206, sass/main.scss */
-.panel .back {
-  float: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 800;
-  width: 100%;
-  height: 100%;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center center;
-  -webkit-transform: rotateY(-180deg);
-  -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transform: rotateY(-180deg);
-  -moz-transform-style: preserve-3d;
   -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-/* line 229, sass/main.scss */
-.panel .back .pad {
+/* line 265, sass/main.scss */
+.panel .side.front {
+  z-index: 900;
+}
+/* line 268, sass/main.scss */
+.panel .side.back {
+  z-index: 800;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+/* line 271, sass/main.scss */
+.panel .side.back .pad {
   position: absolute;
   bottom: 4px;
   background-color: #fff;
   padding: 4px 8px 4px 0;
 }
-/* line 234, sass/main.scss */
-.panel .back .pad h2 {
+/* line 276, sass/main.scss */
+.panel .side.back .pad h2 {
   padding: 0 0 2px;
   font-size: 14px;
   line-height: 14px;
   margin: 0;
 }
-/* line 240, sass/main.scss */
-.panel .back .pad h3 {
+/* line 282, sass/main.scss */
+.panel .side.back .pad h3 {
   padding: 0;
   font-size: 12px;
   line-height: 12px;
   margin: 0;
 }
-/* line 249, sass/main.scss */
+/* line 292, sass/main.scss */
+.panel.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 296, sass/main.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
 }
 
 /* ==========================================================================

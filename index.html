@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>booncon • bam</title>
+    <title>booncon</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/main.css">
@@ -14,7 +14,13 @@
     <script type="text/javascript" src="//use.typekit.net/ong3eiq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
-  <body>     
+  <body>
+    <div id="topbar">
+      <ul class="lang_menu">
+        <li><a href="http://pixels.booncon.com/en/" class="en active">English</a></li>
+        <li><a href="http://pixels.booncon.com/de/" class="de">Deutsch</a></li>
+      </ul>
+    </div>
     <div class="header-container">
       <div class="main-container">
         <header class="clearfix">
@@ -38,10 +44,10 @@
           <a href="/"><img src="gfx/logo_bc-main-invert.svg" alt="Logo booncon" class="main_logo" /></a>
           <nav class="main_menu">
             <ul>
-              <li><a class="anchor_link" href="#">What</a></li>
-              <li><a class="anchor_link" href="#">How</a></li>
-              <li><a class="anchor_link" href="#">Who</a></li>
-              <li><a class="anchor_link" href="#people">When</a></li>
+              <li><a class="anchor_link" href="#what">What</a></li>
+              <li><a class="anchor_link" href="#how">How</a></li>
+              <li><a class="anchor_link" href="#who">Who</a></li>
+              <li><a class="anchor_link" href="#when">When</a></li>
               <li><a class="anchor_link" href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -49,21 +55,49 @@
       </div>
     </div>
 
-
     <div class="parallax_wrapper welcome">
       <h2 class="main_slogan"><div class="parallax" data-anim_type="">booncon is Rocket Science</div></h2>
       <img src="img/office.jpg" alt="Logo booncon" data-anim_type="anti" class="big_pic" />
     </div>
-    
-   
-    <div class="main-container">
+
+    <div class="main-container content_section">
+      <div class="main_full wrapper clearfix">
+        <article>
+          <h1 id="what" class="section_title">What we offer</h1>
+          <section>
+            <p class="normal_text">
+              We develop clever solutions in design and code in two independent sections.
+            </p>
+            <ul class="link_buttons">
+              <li class="pixels"><a href="http://pixels.booncon.com" target="_blank">booncon PIXELS</a></li>
+              <li class="rockets"><a href="http://rockets.booncon.com" target="_blank">booncon ROCKETS</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <div class="main-container content_section">
       <div class="main wrapper clearfix">
         <article>
-          <h1 id="people">Team</h1>
+          <h1 id="how" class="section_title">How we work</h1>
+          <section>
+            <p class="normal_text">
+              booncon stands for an inspiring atmosphere in our office which leads to experimental joy. It's about exchanging ideas between different perspectives and disciplines. Our team is connected by the love to detail and the striving for the best solution.<br><br>Working at booncon is working with friends and creating something new together.
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+   
+    <div class="main-container content_section">
+      <div class="main wrapper clearfix">
+        <article>
+          <h1 id="who" class="section_title">Who we are</h1>
           <section>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/sven_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/sven_flip_front.png);">
+                <div class="front side" style="background-image: url(img/sven_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/sven_flip_front.png);">
                     <div class="pad">
                         <h2>Sven Perkmann</h2>
                         <h3>Founder & Technical Director<h3>
@@ -71,8 +105,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/tobi_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/tobi_flip_front.png);">
+                <div class="front side" style="background-image: url(img/tobi_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/tobi_flip_front.png);">
                     <div class="pad">
                         <h2>Tobias Johannes</h2>
                         <h3>Founder & Financial Director<h3>
@@ -80,8 +114,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/luki_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/luki_flip_front.png);">
+                <div class="front side" style="background-image: url(img/luki_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/luki_flip_front.png);">
                     <div class="pad">
                         <h2>Lukas Jakob Hafner</h2>
                         <h3>Founder & Creative Director<h3>
@@ -89,8 +123,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/alex_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/alex_flip_front.png);">
+                <div class="front side" style="background-image: url(img/alex_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/alex_flip_front.png);">
                     <div class="pad">
                         <h2>Alexander Adkins</h2>
                         <h3>Graphic Designer<h3>
@@ -98,8 +132,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/manu_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/manu_flip_front.png);">
+                <div class="front side" style="background-image: url(img/manu_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/manu_flip_front.png);">
                     <div class="pad">
                         <h2>Manuela Hafner</h2>
                         <h3>Copywriterin<h3>
@@ -107,8 +141,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/tom_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/tom_flip_front.png);">
+                <div class="front side" style="background-image: url(img/tom_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/tom_flip_front.png);">
                     <div class="pad">
                         <h2>Thomas Hurd</h2>
                         <h3>UI Designer<h3>
@@ -116,8 +150,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front" style="background-image: url(img/uzair_flip_back.png);"></div>
-                <div class="back" style="background-image: url(img/uzair_flip_front.png);">
+                <div class="front side" style="background-image: url(img/uzair_flip_back.png);"></div>
+                <div class="back side" style="background-image: url(img/uzair_flip_front.png);">
                     <div class="pad">
                         <h2>Uzair Khan</h2>
                         <h3>Developer<h3>
@@ -125,8 +159,8 @@
                 </div>
             </div>
             <div class="hover panel">
-                <div class="front"></div>
-                <div class="back">
+                <div class="front side"></div>
+                <div class="back side">
                     <div class="pad">
                         <h2>Mark Taranashinski</h2>
                         <h3>Graphic Designer<h3>
@@ -138,50 +172,51 @@
         
       </div>
       <aside>
-          Wir sind ein junges internationales Team und wollen neue Welten entdecken.<br/> Bist auch du bereit für ein Abenteuer, dann bewirb dich bei uns.          
-        </aside>
+        <p class="normal_text">
+        Wir sind ein junges internationales Team und wollen neue Welten entdecken.<br/> Bist auch du bereit für ein Abenteuer, dann bewirb dich bei uns:          
+        </p>
+        <ul class="link_buttons">
+          <li class="jobs"><a href="http://jobs.booncon.com" target="_blank">booncon jobs</a></li>
+        </ul>
+      </aside>
     </div>
 
-    <div class="main-container">
+    <div class="main-container content_section">
       <div class="main wrapper clearfix">
         <article>
-          <section>
-            <h1>Wie wir arbeiten</h1>
-            <p>booncon steht für eine anregende Atmosphäre im Büro, die Experimentierfreude entfacht. In einem Ort des Austauschs zwischen verschiedenen Disziplinen und Blickwinkeln, verbindet unser Team die Liebe zum Detail und das Streben nach der besten Lösung.</br> 
-              Bei booncon zu arbeiten, bedeutet mit Freunden zu arbeiten, um  gemeinsam Neues zu schaffen.</p>
+          <section class="normal_text">
+            
+              <h1 id="when" class="section_title">How we work</h1>
+              <h2>Die Gefährten</h2>
+              <p>Alles begann im Sommer 2010, als wir, Sven, Tobias und Lukas, quer über Europa verteilt arbeiteten.</p>
+              <p>In uns herrschte der Wunsch nach etwas Neuem. Wir waren auf der Suche nach einem Arbeitsumfeld, das über die Arbeit hinausgeht.
+  </p>
+              <p>Wir sind Kinder des Internets: Überall und nirgendwo zuhause, wollten wir gemeinsam etwas auf die Beine stellen.</p>
+              <p>Von der nordischen Kultur und ihrer Schlichtheit schon immer fasziniert, zog es uns nach Skandinavien.</br>
+  Helsinki befand sich so wie wir im Aufbruch und war deshalb der ideale Ort für unser Vorhaben.</p>
+              <p>Helsinkis Start-up-freundliches Umfeld ermöglichte uns eine Partnerschaft mit der Aalto Design Factory, in der wir im Herbst 2011 unsere Zelte aufschlugen.</p>
+              <p>booncon wurde Wirklichkeit und die Arbeit begann.</p>  
+            </section>
+            <section class="normal_text">
+              <h2>Die zweite Stufe</h2>
+              <p>Die Zusammenarbeit mit finnischen und internationalen Unternehmen und der Austausch mit hochmotivierten Studenten beflügelte uns.</p>
+              <p>Steigende Aufträge und ein wachsendes Team zeigten, dass unsere zentrale Idee eines freundschaftlichen Arbeitsumfelds aufging.
+  Voller Tatendrang bezogen wir im Herbst 2012 unser neues Büro im Herzen Helsinkis.</p>
+              <p>Um noch fokussierter an den verschiedenen Projekten arbeiten zu können, haben wir booncon in zwei eigenständige Sparten aufgeteilt: booncon PIXELS und booncon ROCKETS.</p>
+            </section>
           
-          </section>
-          <header>
-            <h1>Wer wir sind</h1>
-            <h2>Die Gefährten</h2>
-            <p>Alles begann im Sommer 2010, als wir, Sven, Tobias und Lukas, quer über Europa verteilt arbeiteten.</p>
-            <p>In uns herrschte der Wunsch nach etwas Neuem. Wir waren auf der Suche nach einem Arbeitsumfeld, das über die Arbeit hinausgeht.
-</p>
-            <p>Wir sind Kinder des Internets: Überall und nirgendwo zuhause, wollten wir gemeinsam etwas auf die Beine stellen.</p>
-            <p>Von der nordischen Kultur und ihrer Schlichtheit schon immer fasziniert, zog es uns nach Skandinavien.</br>
-Helsinki befand sich so wie wir im Aufbruch und war deshalb der ideale Ort für unser Vorhaben.</p>
-            <p>Helsinkis Start-up-freundliches Umfeld ermöglichte uns eine Partnerschaft mit der Aalto Design Factory, in der wir im Herbst 2011 unsere Zelte aufschlugen.</p>
-            <p>booncon wurde Wirklichkeit und die Arbeit begann.</p>  
-          </header>
-          <section>
-            <h2>Die zweite Stufe</h2>
-            <p>Die Zusammenarbeit mit finnischen und internationalen Unternehmen und der Austausch mit hochmotivierten Studenten beflügelte uns.</p>
-            <p>Steigende Aufträge und ein wachsendes Team zeigten, dass unsere zentrale Idee eines freundschaftlichen Arbeitsumfelds aufging.
-Voller Tatendrang bezogen wir im Herbst 2012 unser neues Büro im Herzen Helsinkis.</p>
-            <p>Um noch fokussierter an den verschiedenen Projekten arbeiten zu können, haben wir booncon in zwei eigenständige Sparten aufgeteilt: booncon PIXELS und booncon ROCKETS.</p>
-          </section>
         </article>
         
-      </div> <!-- #main -->
+      </div>
       <aside>
           <h3>Impressions</h3>
           <div class="parallax_wrapper aside">
             <img src="img/office.jpg" alt="Logo booncon" class="parallax" data-anim_type="zoom_out" />
           </div>
         </aside>
-    </div> <!-- #main-container -->
+    </div>
     
-    <footer class="parallax_wrapper map" id="contact">
+    <footer class="parallax_wrapper map content_section" id="contact">
       <h2 class="main_slogan"><div class="parallax" data-anim_type="fade_in">contact info.</div></h2>
       <img src="img/map.jpg" alt="Logo booncon" class="parallax" data-anim_type="anti" />  
     </footer>        
