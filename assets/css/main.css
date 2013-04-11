@@ -1,7 +1,7 @@
 /* line 10, sass/_responsive_layout.scss */
 .main-container {
   overflow: hidden;
-  width: 80%;
+  max-width: 1420px;
   margin: 0 auto;
 }
 /* line 46, ../../../../../../../Library/Ruby/Gems/1.8/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
@@ -594,6 +594,17 @@ textarea {
   }
 }
 /* ==========================================================================
+   Custom fonts
+   ========================================================================== */
+@font-face {
+  font-family: "SSSymbolicons";
+  src: url("webfonts/ss-symbolicons-block.eot");
+  src: url("webfonts/ss-symbolicons-block.eot?#iefix") format("embedded-opentype"), url("webfonts/ss-symbolicons-block.woff") format("woff"), url("webfonts/ss-symbolicons-block.ttf") format("truetype"), url("webfonts/ss-symbolicons-block.svg#SSSymboliconsBlock") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==========================================================================
    SASS variables
    ========================================================================== */
 /* ==========================================================================
@@ -602,26 +613,26 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* line 50, sass/main.scss */
+/* line 82, sass/main.scss */
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 52, sass/main.scss */
+/* line 84, sass/main.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", sans-serif;
 }
 
-/* line 56, sass/main.scss */
+/* line 88, sass/main.scss */
 a {
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-/* line 58, sass/main.scss */
+/* line 90, sass/main.scss */
 a:hover {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -629,7 +640,7 @@ a:hover {
   transition: all 0.3s;
 }
 
-/* line 67, sass/main.scss */
+/* line 99, sass/main.scss */
 body {
   font-family: "ff-meta-web-pro", sans-serif;
   line-height: 1.5;
@@ -637,24 +648,24 @@ body {
   color: #333333;
 }
 
-/* line 74, sass/main.scss */
+/* line 106, sass/main.scss */
 #topbar {
   margin-bottom: 1.2em;
   overflow: hidden;
   background-color: #3b454f;
 }
-/* line 78, sass/main.scss */
+/* line 110, sass/main.scss */
 #topbar .lang_menu {
   margin: 0em 2em;
   float: right;
   list-style: none;
 }
-/* line 82, sass/main.scss */
+/* line 114, sass/main.scss */
 #topbar .lang_menu li {
   float: left;
   margin: 0 0 0 1.4em;
 }
-/* line 85, sass/main.scss */
+/* line 117, sass/main.scss */
 #topbar .lang_menu li a {
   display: block;
   height: 100%;
@@ -665,38 +676,39 @@ body {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 94, sass/main.scss */
+/* line 126, sass/main.scss */
 #topbar .lang_menu li a.active, #topbar .lang_menu li a:hover {
   background-color: #677889;
 }
 
-/* line 102, sass/main.scss */
+/* line 134, sass/main.scss */
 .header-container {
   margin-bottom: 1em;
   padding: 0.4em 0;
   height: 5.4em;
 }
-/* line 106, sass/main.scss */
+/* line 138, sass/main.scss */
 .header-container .main_logo {
   height: 100%;
-  padding: 0.498em 0;
+  padding: 0.1em 0;
   float: left;
 }
-/* line 111, sass/main.scss */
+/* line 143, sass/main.scss */
 .header-container .main_menu {
   float: right;
 }
-/* line 113, sass/main.scss */
+/* line 145, sass/main.scss */
 .header-container .main_menu ul {
+  margin: 0;
   height: 100%;
   padding: 0;
 }
-/* line 116, sass/main.scss */
+/* line 149, sass/main.scss */
 .header-container .main_menu ul li {
   display: inline-block;
   margin: 0 0 0 0.6em;
 }
-/* line 119, sass/main.scss */
+/* line 152, sass/main.scss */
 .header-container .main_menu ul li a {
   color: #111;
   text-decoration: none;
@@ -704,53 +716,53 @@ body {
   font-size: 1.2em;
   padding: 0.4em 0.8em;
 }
-/* line 125, sass/main.scss */
+/* line 158, sass/main.scss */
 .header-container .main_menu ul li a:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
-/* line 132, sass/main.scss */
+/* line 165, sass/main.scss */
 .header-container.floating {
   top: 0;
-  opacity: 0;
-  height: 4.4em;
+  height: 2.6em;
   display: none;
   margin-bottom: 0;
   position: fixed;
   width: 100%;
   background-color: #3b454f;
   z-index: 99;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
-/* line 137, sass/main.scss */
+/* line 169, sass/main.scss */
 .header-container.floating.shown {
-  opacity: 1;
   display: block;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
-/* line 151, sass/main.scss */
+/* line 182, sass/main.scss */
 .header-container.floating .main_menu ul li a {
   color: #fff;
+  font-size: 1.2em;
+  padding: 0em 0.8em;
 }
 
-/* line 160, sass/main.scss */
+/* line 193, sass/main.scss */
 .section_title {
   margin: 0 0 1em;
 }
 
-/* line 164, sass/main.scss */
+/* line 197, sass/main.scss */
 .normal_text {
   font-size: 1.2em;
 }
 
-/* line 32, sass/main.scss */
+/* line 64, sass/main.scss */
 .welcome:after {
-  background: rgba(230, 230, 230, 0.1) url(../gfx/stripe_white.png);
+  background: rgba(230, 230, 230, 0.4) url(../gfx/stripe_white.png);
   content: ' ';
   width: 100%;
   height: 100%;
@@ -762,19 +774,19 @@ body {
   right: 0;
 }
 
-/* line 173, sass/main.scss */
+/* line 206, sass/main.scss */
 .parallax_wrapper {
   height: 600px;
   overflow: hidden;
   position: relative;
 }
 
-/* line 179, sass/main.scss */
+/* line 212, sass/main.scss */
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
-  color: #333;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+  color: #3b454f;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   text-align: center;
   font-size: 72px;
   font-weight: 100;
@@ -785,15 +797,14 @@ body {
   left: 50%;
   top: 50%;
   z-index: 5;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 197, sass/main.scss */
+/* line 229, sass/main.scss */
 .link_buttons {
   padding: 0;
   overflow: hidden;
 }
-/* line 200, sass/main.scss */
+/* line 232, sass/main.scss */
 .link_buttons li {
   display: inline-block;
   height: 8em;
@@ -801,7 +812,7 @@ body {
   padding: 0;
   float: left;
 }
-/* line 206, sass/main.scss */
+/* line 238, sass/main.scss */
 .link_buttons li a {
   text-indent: -9999px;
   text-align: center;
@@ -817,37 +828,46 @@ body {
   -o-background-size: 150px;
   background-size: 150px;
 }
-/* line 217, sass/main.scss */
+/* line 249, sass/main.scss */
 .link_buttons li a:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
-/* line 221, sass/main.scss */
+/* line 253, sass/main.scss */
 .link_buttons li.pixels {
   width: 50%;
 }
-/* line 223, sass/main.scss */
+/* line 255, sass/main.scss */
 .link_buttons li.pixels a {
-  background: #e24b70 url(../gfx/logo_bc-pixels_invert.png) 50% 50% no-repeat;
+  background-color: #e24b70;
+  background-image: url(../gfx/logo_bc-pixels_invert.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
-/* line 227, sass/main.scss */
+/* line 262, sass/main.scss */
 .link_buttons li.rockets {
   width: 50%;
 }
-/* line 229, sass/main.scss */
+/* line 264, sass/main.scss */
 .link_buttons li.rockets a {
-  background: #22aeeb url(../gfx/logo_bc-rockets_invert.png) 50% 50% no-repeat;
+  background-color: #22aeeb;
+  background-image: url(../gfx/logo_bc-rockets_invert.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
-/* line 233, sass/main.scss */
+/* line 271, sass/main.scss */
 .link_buttons li.jobs {
   width: 100%;
   height: 6em;
 }
-/* line 236, sass/main.scss */
+/* line 274, sass/main.scss */
 .link_buttons li.jobs a {
-  background: #3b454f url(../gfx/logo_bc-jobs_invert.png) 50% 50% no-repeat;
+  background-color: #3b454f;
+  background-image: url(../gfx/logo_bc-jobs_invert.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-/* line 243, sass/main.scss */
+/* line 284, sass/main.scss */
 .panel {
   float: left;
   width: 25%;
@@ -862,7 +882,7 @@ body {
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 252, sass/main.scss */
+/* line 293, sass/main.scss */
 .panel .side {
   float: none;
   position: absolute;
@@ -895,11 +915,11 @@ body {
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-/* line 265, sass/main.scss */
+/* line 306, sass/main.scss */
 .panel .side.front {
   z-index: 900;
 }
-/* line 268, sass/main.scss */
+/* line 309, sass/main.scss */
 .panel .side.back {
   z-index: 800;
   -webkit-transform: rotateY(-180deg);
@@ -908,28 +928,28 @@ body {
   -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
-/* line 271, sass/main.scss */
+/* line 312, sass/main.scss */
 .panel .side.back .pad {
   position: absolute;
   bottom: 4px;
   background-color: #fff;
   padding: 4px 8px 4px 0;
 }
-/* line 276, sass/main.scss */
+/* line 317, sass/main.scss */
 .panel .side.back .pad h2 {
   padding: 0 0 2px;
   font-size: 14px;
   line-height: 14px;
   margin: 0;
 }
-/* line 282, sass/main.scss */
+/* line 323, sass/main.scss */
 .panel .side.back .pad h3 {
   padding: 0;
   font-size: 12px;
   line-height: 12px;
   margin: 0;
 }
-/* line 292, sass/main.scss */
+/* line 333, sass/main.scss */
 .panel.flip .front {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
@@ -938,7 +958,7 @@ body {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 296, sass/main.scss */
+/* line 337, sass/main.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -948,43 +968,57 @@ body {
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 304, sass/main.scss */
+/* line 345, sass/main.scss */
+.partner_logo {
+  float: left;
+  margin: 0 3em 0 0;
+  height: 8em;
+}
+/* line 350, sass/main.scss */
+.partner_logo a:hover {
+  opacity: 0.7;
+}
+/* line 354, sass/main.scss */
+.partner_logo img {
+  height: 100%;
+}
+
+/* line 359, sass/main.scss */
 .map {
-  background: url(../gfx/Helsinki.png) 50% 50%;
+  background-color: #3b454f;
+  background-image: url(../gfx/Helsinki.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   position: relative;
   border-top: 1px solid #888;
+  margin-top: 2em;
 }
-/* line 308, sass/main.scss */
+/* line 367, sass/main.scss */
 .map .contact_wrap {
   padding: 40px 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* line 312, sass/main.scss */
+/* line 371, sass/main.scss */
 .map .contact {
+  overflow: hidden;
   font-size: 2em;
   font-family: "proxima-nova", sans-serif;
   color: #fff;
   width: 60%;
   float: right;
   text-align: right;
+  font-weight: 600;
+  line-height: 1.2;
 }
-/* line 320, sass/main.scss */
-.map .section_block {
-  margin: 0;
-}
-/* line 323, sass/main.scss */
-.map .title {
-  display: none;
-}
-/* line 326, sass/main.scss */
+/* line 382, sass/main.scss */
 .map .contact_title {
   font-size: 1.8em;
   margin: 0 0 0.4em;
   font-weight: 800;
 }
-/* line 331, sass/main.scss */
+/* line 387, sass/main.scss */
 .map .contact_link {
-  color: #3b454f;
+  color: #d9dee3;
   text-decoration: none;
   font-weight: 900;
   font-size: 1.4em;
@@ -993,61 +1027,95 @@ body {
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-/* line 337, sass/main.scss */
+/* line 393, sass/main.scss */
 .map .contact_link:hover {
-  opacity: 0.75;
+  opacity: 0.7;
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* line 342, sass/main.scss */
+/* line 398, sass/main.scss */
 .map .contact_phone {
   font-weight: 800;
   font-size: 1.1em;
   text-align: right;
 }
-/* line 347, sass/main.scss */
-.map .job_link {
-  font-family: "proxima-nova", sans-serif;
-  font-weight: 900;
-  font-size: 0.74em;
-  line-height: 1.5em;
-  display: inline-block;
-  background-color: #3b454f;
-  padding: 0.1em 0.6em 0;
-  color: #fff;
-  text-decoration: none;
-  margin: 0.2em -0.2em 0.3em 0;
-  text-transform: uppercase;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-/* line 360, sass/main.scss */
-.map .job_link:hover {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  opacity: 0.75;
-}
-/* line 364, sass/main.scss */
-.map .job_link span {
-  font-size: 0.74em;
-  line-height: 1.5em;
-}
-/* line 369, sass/main.scss */
+/* line 403, sass/main.scss */
 .map .contact_small {
   font-size: 0.6em;
   float: right;
-  padding-left: 4em;
+  margin-top: 1.2em;
+  text-align: right;
+  overflow: hidden;
 }
-/* line 374, sass/main.scss */
+/* line 410, sass/main.scss */
 .map .contact_social {
+  width: 100%;
   font-size: 0.6em;
   float: right;
+  margin-top: 1em;
+}
+/* line 411, sass/main.scss */
+.map .contact_social ul {
+  float: right;
+}
+/* line 418, sass/main.scss */
+.map .contact_social .contact_icon {
+  vertical-align: middle;
+  float: left;
+  margin: 0 0 0 1em;
+}
+/* line 422, sass/main.scss */
+.map .contact_social .contact_icon a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+/* line 426, sass/main.scss */
+.map .contact_social .contact_icon a img {
+  vertical-align: middle;
+  height: 2.2em;
+  margin: 0 0.4em 0 0;
+}
+/* line 431, sass/main.scss */
+.map .contact_social .contact_icon a:hover {
+  opacity: 0.7;
+}
+/* line 437, sass/main.scss */
+.map .footer_text {
+  width: 100%;
+  text-align: center;
+}
+/* line 440, sass/main.scss */
+.map .footer_text a {
+  color: #aaa;
+  text-decoration: none;
+}
+/* line 445, sass/main.scss */
+.map .footer_text .footer_symbol {
+  font-family: "SSSymbolicons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-size: 120%;
+  color: #d9dee3;
+  vertical-align: middle;
+}
+
+/* line 455, sass/main.scss */
+.no-bullets {
+  list-style: none;
+  padding: 0;
 }
 
 /* ==========================================================================

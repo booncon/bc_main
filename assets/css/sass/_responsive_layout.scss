@@ -10,7 +10,7 @@ $zen-auto-include-item-base: false;
 .main-container {
   @include zen-grid-container;
   @include clearfix;
-  width: 80%;
+  max-width: 1420px;
   margin: 0 auto;
 }
 
