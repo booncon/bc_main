@@ -158,4 +158,7 @@ $(document).ready(function () {
   //initContainerSizes();
   initScrollListener();
   initResizeActions();
+
+  
+  
 });

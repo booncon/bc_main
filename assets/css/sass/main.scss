@@ -458,6 +458,27 @@ body {
 }
 
 
+
+svg {
+  //border: 1px solid black;
+}
+
+line {
+  stroke-width: 2px;
+  stroke: black;
+}
+
+text {
+  text-anchor: middle;
+  font-family: arial;
+}
+
+.head {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

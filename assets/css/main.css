@@ -1118,6 +1118,24 @@ body {
   padding: 0;
 }
 
+/* line 466, sass/main.scss */
+line {
+  stroke-width: 2px;
+  stroke: black;
+}
+
+/* line 471, sass/main.scss */
+text {
+  text-anchor: middle;
+  font-family: arial;
+}
+
+/* line 476, sass/main.scss */
+.head {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
