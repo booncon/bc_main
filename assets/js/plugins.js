@@ -36,8 +36,10 @@ function d3xTimeline (data, options) {
     h: 700,
     pad: 50,
     r: 20,
+    r_stopper: 4,
     scale_factor: 2,
     line_length: 50,
+    box_pos: 130,
     box_pos: 130,
     duration_in: 200,
     duration_out: 500
@@ -51,16 +53,33 @@ function d3xTimeline (data, options) {
   options = merge(options, defaults);
 
   var svg = d3.select(options.container).append("svg")
-      .attr("viewBox", "0 0 " + options.w + " " + options.h )
+    .attr("viewBox", "0 0 " + options.w + " " + options.h )
     .attr("preserveAspectRatio", "xMidYMin meet");
-    //  .attr("width", options.w)
-     // .attr("height", options.h);
+      //.attr("width", options.w)
+      //.attr("height", options.h);
+
+  // arrow marker
+  svg.append('marker')
+      .attr('id', 'arrow')
+      .attr('viewBox', "0 0 10 10" )
+      .attr('refX', "0")
+      .attr('refY', "5")
+      .attr('markerUnits', "strokeWidth")
+      .attr('markerWidth', "5")
+      .attr('markerHeight', "5")
+      .attr('orient', "auto")
+    .append('path')
+      .attr('d', "M 0 0 L 10 5 L 0 10 z")
+      .attr('class', 'arrow')
 
   var timeline = svg.append('g')
       .attr('transform', function(d,i) { return "translate("+options.w/2+","+0+")"; });
 
+  // timeline
   timeline.append('line')
-      .attr('y2', options.h);
+      .attr('y1', options.pad)
+      .attr('y2', options.h-10)
+      .attr('marker-end', "url(#arrow)");
 
   var nodes = timeline.selectAll('g.node')
       .data(data).enter()
@@ -75,26 +94,41 @@ function d3xTimeline (data, options) {
       .attr('transform', function(d,i) {
         if (i%2)  return "translate("+options.box_pos+","+0+")";
         else      return "translate("+(-options.box_pos)+","+0+")";
+      })
+      .attr('class', function(d,i) {
+        return (i%2) ? "right" : "left";
       });
 
   boxes.append('text')
-      .attr('dy', '-1em')
+      .attr('dy', '1.2em')
       .attr('class', 'head')
       .text(function(d) { return d.head; });
 
   boxes.append('text')
-      .attr('dy', '1em')
+      .attr('dy', '2.8em')
       .attr('class', 'body')
       .text(function(d) { return d.body; });
 
   var circles = nodes.append('g');
 
-  circles.append('line')
-      .attr('x2', function(d,i) { 
-        if (i%2)  return options.line_length;
-        else      return -options.line_length;
-      });
+  // calculates the end position of the circle line
+  var circleLineEnd = function(d,i) {
+    if (i%2)  return options.line_length;
+    else      return -options.line_length;
+  };
 
+  // line outgoing from circle
+  circles.append('line')
+      .attr('x2', circleLineEnd)
+      .attr('marker-end', "url(#circle)");
+
+  // little stopper dots at the end of the lines
+  circles.append('circle')
+      .attr('cx', circleLineEnd)
+      .attr('r', options.r_stopper)
+      .attr('class', 'marker');
+
+  // the "circles" themselves
   circles.append('image')
       .attr('xlink:href', function(d) { return d.img; })
       .attr('x', -options.r)

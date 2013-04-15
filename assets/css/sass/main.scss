@@ -465,17 +465,36 @@ svg {
 
 line {
   stroke-width: 2px;
-  stroke: black;
+  stroke: lighten($color_bc, 40%);
 }
 
+g.left text {
+  text-anchor: start;
+}
+g.right text {
+  text-anchor: end;
+}
+
+
 text {
-  text-anchor: middle;
-  font-family: arial;
+  font-family: $body_fonts;
+  font-size: 0.9em;
 }
 
 .head {
   font-weight: bold;
   text-transform: uppercase;
+  font-family: $title_fonts;
+  font-size: 1.1em;
+}
+
+circle.marker {
+  fill: lighten($color_bc, 40%);
+
+}
+
+path.arrow {
+  fill: lighten($color_bc, 40%);
 }
 
 

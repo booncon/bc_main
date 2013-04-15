@@ -3,6 +3,7 @@
   overflow: hidden;
   max-width: 1420px;
   margin: 0 auto;
+  width: 94%;
 }
 /* line 46, ../../../../../../../Library/Ruby/Gems/1.8/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
 .main-container:before, .main-container:after {
@@ -14,15 +15,15 @@
   clear: both;
 }
 
-/* line 17, sass/_responsive_layout.scss */
+/* line 18, sass/_responsive_layout.scss */
 .content_section {
   margin-top: 4em;
 }
 
-/* line 22, sass/_responsive_layout.scss */
+/* line 23, sass/_responsive_layout.scss */
 .main {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -34,10 +35,10 @@
   margin-right: -71.42857%;
 }
 
-/* line 26, sass/_responsive_layout.scss */
+/* line 27, sass/_responsive_layout.scss */
 .main_full {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -49,10 +50,10 @@
   margin-right: -100%;
 }
 
-/* line 31, sass/_responsive_layout.scss */
+/* line 32, sass/_responsive_layout.scss */
 aside {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1121,19 +1122,41 @@ body {
 /* line 466, sass/main.scss */
 line {
   stroke-width: 2px;
-  stroke: black;
+  stroke: #9fabb7;
 }
 
 /* line 471, sass/main.scss */
-text {
-  text-anchor: middle;
-  font-family: arial;
+g.left text {
+  text-anchor: start;
 }
 
-/* line 476, sass/main.scss */
+/* line 474, sass/main.scss */
+g.right text {
+  text-anchor: end;
+}
+
+/* line 479, sass/main.scss */
+text {
+  font-family: "ff-meta-web-pro", sans-serif;
+  font-size: 0.9em;
+}
+
+/* line 484, sass/main.scss */
 .head {
   font-weight: bold;
   text-transform: uppercase;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.1em;
+}
+
+/* line 491, sass/main.scss */
+circle.marker {
+  fill: #9fabb7;
+}
+
+/* line 496, sass/main.scss */
+path.arrow {
+  fill: #9fabb7;
 }
 
 /* ==========================================================================

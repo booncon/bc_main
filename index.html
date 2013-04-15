@@ -177,7 +177,7 @@
         </ul>
       </aside>
     </div>
-    <div class="main-container content_section">
+    <div class="main-container content_section story_text">
       <div class="main wrapper clearfix">
         <article>
           <h1 id="when" class="section_title">How we work</h1>
@@ -264,17 +264,28 @@
         s.parentNode.insertBefore(g,s)}(document,'script'));
 
         var data = [
-        { head: 'June 2010', body: 'Idea of booncon', img: 'circle.jpg' },
-        { head: 'September 2011', body: 'founded + DF', img: 'circle.jpg' },
-        { head: 'September 2012', body: 'Office Helsinki', img: 'circle.jpg' },
-        { head: 'January 2013', body: 'Team growth', img: 'circle.jpg' },
-        { head: 'March 2013', body: 'pixels + rockets', img: 'circle.jpg' }
+        { head: 'Jun 2010', body: 'Idea booncon', img: 'assets/img/time_idea.jpg' },
+        { head: 'Sep 2011', body: 'Foundation + ADF', img: 'assets/img/time_office_df.jpg' },
+        { head: 'Sep 2012', body: 'Office Helsinki', img: 'assets/img/time_office_hki.jpg' },
+        { head: 'Jan 2013', body: 'New companions', img: 'assets/img/time_new_companions.jpg' },
+        { head: 'Mar 2013', body: 'Pixels & Rockets', img: 'assets/img/time_pixels_rockets.jpg' }
       ];
+
+      var time_wrap_width = $('#timeline').width();
+      var time_wrap_height = $('.story_text').height();
 
       var timeline = new d3xTimeline(data, {
         container: '#timeline',
-        w: $('#timeline').width(),
-        h: 600
+        w: time_wrap_width,
+        h: time_wrap_height * 0.94,
+        pad: time_wrap_height/14,
+        r: time_wrap_width/12,
+        scale_factor: 1.56,
+        r_stopper: 3,
+        line_length: time_wrap_width/2.72,
+        box_pos: time_wrap_width/2.05,
+        duration_in: 200,
+        duration_out: 500
       });
     </script>
   </body>
