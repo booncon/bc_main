@@ -460,7 +460,8 @@ body {
 
 
 svg {
-  //border: 1px solid black;
+  width: 100%;
+  height: 80%;
 }
 
 line {
@@ -497,6 +498,15 @@ path.arrow {
   fill: lighten($color_bc, 40%);
 }
 
+.test_container {
+  height: 100%;
+  overflow: hidden;
+}
+
+#timeline {
+  //max-height: 500px;
+  height: 100%;
+}
 
 /* ==========================================================================
    Media Queries

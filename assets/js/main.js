@@ -149,7 +149,9 @@ function initResizeActions() {
   $(window).resize(function() {
     initContainerSizes();
     $('.par_offset').remove();
-    $('.offset_init').removeClass('offset_init'); 
+    $('.offset_init').removeClass('offset_init');
+
+    //$('#timeline svg').height($('.story_text').height()).width($('#timeline').width());
   });
 }
 $(document).ready(function () {

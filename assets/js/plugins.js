@@ -55,8 +55,8 @@ function d3xTimeline (data, options) {
   var svg = d3.select(options.container).append("svg")
     .attr("viewBox", "0 0 " + options.w + " " + options.h )
     .attr("preserveAspectRatio", "xMidYMin meet");
-      //.attr("width", options.w)
-      //.attr("height", options.h);
+    //.attr("width", options.w)
+    //.attr("height", options.h);
 
   // arrow marker
   svg.append('marker')
