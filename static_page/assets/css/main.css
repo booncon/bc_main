@@ -624,16 +624,17 @@ textarea {
 /* line 84, sass/main.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
 }
 
-/* line 88, sass/main.scss */
+/* line 89, sass/main.scss */
 a {
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-/* line 90, sass/main.scss */
+/* line 91, sass/main.scss */
 a:hover {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -641,32 +642,33 @@ a:hover {
   transition: all 0.3s;
 }
 
-/* line 99, sass/main.scss */
+/* line 100, sass/main.scss */
 body {
   font-family: "ff-meta-web-pro", sans-serif;
   line-height: 1.5;
   background-color: white;
   color: #333333;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 106, sass/main.scss */
+/* line 108, sass/main.scss */
 #topbar {
   margin-bottom: 1.2em;
   overflow: hidden;
   background-color: #3b454f;
 }
-/* line 110, sass/main.scss */
+/* line 112, sass/main.scss */
 #topbar .lang_menu {
   margin: 0em 2em;
   float: right;
   list-style: none;
 }
-/* line 114, sass/main.scss */
+/* line 116, sass/main.scss */
 #topbar .lang_menu li {
   float: left;
   margin: 0 0 0 1.4em;
 }
-/* line 117, sass/main.scss */
+/* line 119, sass/main.scss */
 #topbar .lang_menu li a {
   display: block;
   height: 100%;
@@ -677,39 +679,39 @@ body {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 126, sass/main.scss */
+/* line 128, sass/main.scss */
 #topbar .lang_menu li a.active, #topbar .lang_menu li a:hover {
   background-color: #677889;
 }
 
-/* line 134, sass/main.scss */
+/* line 136, sass/main.scss */
 .header-container {
   margin-bottom: 1em;
   padding: 0.4em 0;
   height: 5.4em;
 }
-/* line 138, sass/main.scss */
+/* line 140, sass/main.scss */
 .header-container .main_logo {
   height: 100%;
   padding: 0.1em 0;
   float: left;
 }
-/* line 143, sass/main.scss */
+/* line 145, sass/main.scss */
 .header-container .main_menu {
   float: right;
 }
-/* line 145, sass/main.scss */
+/* line 147, sass/main.scss */
 .header-container .main_menu ul {
-  margin: 0;
+  margin: 1.6em 0 0;
   height: 100%;
   padding: 0;
 }
-/* line 149, sass/main.scss */
+/* line 151, sass/main.scss */
 .header-container .main_menu ul li {
   display: inline-block;
   margin: 0 0 0 0.6em;
 }
-/* line 152, sass/main.scss */
+/* line 154, sass/main.scss */
 .header-container .main_menu ul li a {
   color: #111;
   text-decoration: none;
@@ -717,15 +719,16 @@ body {
   font-size: 1.2em;
   padding: 0.4em 0.8em;
 }
-/* line 158, sass/main.scss */
+/* line 160, sass/main.scss */
 .header-container .main_menu ul li a:hover {
   opacity: 0.7;
 }
-/* line 165, sass/main.scss */
+/* line 167, sass/main.scss */
 .header-container.floating {
   top: 0;
   height: 2.6em;
   display: none;
+  opacity: 0;
   margin-bottom: 0;
   position: fixed;
   width: 100%;
@@ -736,27 +739,45 @@ body {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 169, sass/main.scss */
+/* line 172, sass/main.scss */
 .header-container.floating.shown {
   display: block;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
 }
-/* line 182, sass/main.scss */
+/* line 175, sass/main.scss */
+.header-container.floating.fade {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+/* line 186, sass/main.scss */
+.header-container.floating .main_menu ul {
+  margin-top: 0em;
+}
+/* line 189, sass/main.scss */
 .header-container.floating .main_menu ul li a {
   color: #fff;
   font-size: 1.2em;
   padding: 0em 0.8em;
 }
 
-/* line 193, sass/main.scss */
+/* line 200, sass/main.scss */
 .section_title {
   margin: 0 0 1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.88em;
+  color: #3b454f;
 }
 
-/* line 197, sass/main.scss */
+/* line 207, sass/main.scss */
+h2 {
+  font-size: 1.4em;
+  color: #3b454f;
+}
+
+/* line 211, sass/main.scss */
 .normal_text {
   font-size: 1.2em;
 }
@@ -775,14 +796,14 @@ body {
   right: 0;
 }
 
-/* line 206, sass/main.scss */
+/* line 220, sass/main.scss */
 .parallax_wrapper {
   height: 600px;
   overflow: hidden;
   position: relative;
 }
 
-/* line 212, sass/main.scss */
+/* line 226, sass/main.scss */
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
@@ -800,12 +821,12 @@ body {
   z-index: 5;
 }
 
-/* line 229, sass/main.scss */
+/* line 243, sass/main.scss */
 .link_buttons {
   padding: 0;
   overflow: hidden;
 }
-/* line 232, sass/main.scss */
+/* line 246, sass/main.scss */
 .link_buttons li {
   display: inline-block;
   height: 8em;
@@ -813,7 +834,7 @@ body {
   padding: 0;
   float: left;
 }
-/* line 238, sass/main.scss */
+/* line 252, sass/main.scss */
 .link_buttons li a {
   text-indent: -9999px;
   text-align: center;
@@ -829,38 +850,38 @@ body {
   -o-background-size: 150px;
   background-size: 150px;
 }
-/* line 249, sass/main.scss */
+/* line 263, sass/main.scss */
 .link_buttons li a:hover {
   opacity: 0.7;
 }
-/* line 253, sass/main.scss */
+/* line 267, sass/main.scss */
 .link_buttons li.pixels {
   width: 50%;
 }
-/* line 255, sass/main.scss */
+/* line 269, sass/main.scss */
 .link_buttons li.pixels a {
   background-color: #e24b70;
   background-image: url(../gfx/logo_bc-pixels_invert.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-/* line 262, sass/main.scss */
+/* line 276, sass/main.scss */
 .link_buttons li.rockets {
   width: 50%;
 }
-/* line 264, sass/main.scss */
+/* line 278, sass/main.scss */
 .link_buttons li.rockets a {
   background-color: #22aeeb;
   background-image: url(../gfx/logo_bc-rockets_invert.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-/* line 271, sass/main.scss */
+/* line 285, sass/main.scss */
 .link_buttons li.jobs {
   width: 100%;
   height: 6em;
 }
-/* line 274, sass/main.scss */
+/* line 288, sass/main.scss */
 .link_buttons li.jobs a {
   background-color: #3b454f;
   background-image: url(../gfx/logo_bc-jobs_invert.png);
@@ -868,7 +889,7 @@ body {
   background-repeat: no-repeat;
 }
 
-/* line 284, sass/main.scss */
+/* line 298, sass/main.scss */
 .panel {
   float: left;
   width: 25%;
@@ -883,7 +904,7 @@ body {
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 293, sass/main.scss */
+/* line 307, sass/main.scss */
 .panel .side {
   float: none;
   position: absolute;
@@ -916,11 +937,11 @@ body {
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-/* line 306, sass/main.scss */
+/* line 320, sass/main.scss */
 .panel .side.front {
   z-index: 900;
 }
-/* line 309, sass/main.scss */
+/* line 323, sass/main.scss */
 .panel .side.back {
   z-index: 800;
   -webkit-transform: rotateY(-180deg);
@@ -929,28 +950,28 @@ body {
   -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
-/* line 312, sass/main.scss */
+/* line 326, sass/main.scss */
 .panel .side.back .pad {
   position: absolute;
   bottom: 4px;
   background-color: #fff;
   padding: 4px 8px 4px 0;
 }
-/* line 317, sass/main.scss */
+/* line 331, sass/main.scss */
 .panel .side.back .pad h2 {
   padding: 0 0 2px;
   font-size: 14px;
   line-height: 14px;
   margin: 0;
 }
-/* line 323, sass/main.scss */
+/* line 337, sass/main.scss */
 .panel .side.back .pad h3 {
   padding: 0;
   font-size: 12px;
   line-height: 12px;
   margin: 0;
 }
-/* line 333, sass/main.scss */
+/* line 347, sass/main.scss */
 .panel.flip .front {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
@@ -959,7 +980,7 @@ body {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 337, sass/main.scss */
+/* line 351, sass/main.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -969,22 +990,22 @@ body {
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 345, sass/main.scss */
+/* line 359, sass/main.scss */
 .partner_logo {
   float: left;
   margin: 0 3em 0 0;
   height: 8em;
 }
-/* line 350, sass/main.scss */
+/* line 364, sass/main.scss */
 .partner_logo a:hover {
   opacity: 0.7;
 }
-/* line 354, sass/main.scss */
+/* line 368, sass/main.scss */
 .partner_logo img {
   height: 100%;
 }
 
-/* line 359, sass/main.scss */
+/* line 373, sass/main.scss */
 .map {
   background-color: #3b454f;
   background-image: url(../gfx/Helsinki.png);
@@ -994,12 +1015,12 @@ body {
   border-top: 1px solid #888;
   margin-top: 2em;
 }
-/* line 367, sass/main.scss */
+/* line 381, sass/main.scss */
 .map .contact_wrap {
   padding: 40px 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* line 371, sass/main.scss */
+/* line 385, sass/main.scss */
 .map .contact {
   overflow: hidden;
   font-size: 2em;
@@ -1011,13 +1032,13 @@ body {
   font-weight: 600;
   line-height: 1.2;
 }
-/* line 382, sass/main.scss */
+/* line 396, sass/main.scss */
 .map .contact_title {
   font-size: 1.8em;
   margin: 0 0 0.4em;
   font-weight: 800;
 }
-/* line 387, sass/main.scss */
+/* line 401, sass/main.scss */
 .map .contact_link {
   color: #d9dee3;
   text-decoration: none;
@@ -1028,7 +1049,7 @@ body {
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-/* line 393, sass/main.scss */
+/* line 407, sass/main.scss */
 .map .contact_link:hover {
   opacity: 0.7;
   -webkit-transition: all 200ms ease-in-out;
@@ -1036,13 +1057,13 @@ body {
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* line 398, sass/main.scss */
+/* line 412, sass/main.scss */
 .map .contact_phone {
   font-weight: 800;
   font-size: 1.1em;
   text-align: right;
 }
-/* line 403, sass/main.scss */
+/* line 417, sass/main.scss */
 .map .contact_small {
   font-size: 0.6em;
   float: right;
@@ -1050,50 +1071,50 @@ body {
   text-align: right;
   overflow: hidden;
 }
-/* line 410, sass/main.scss */
+/* line 424, sass/main.scss */
 .map .contact_social {
   width: 100%;
   font-size: 0.6em;
   float: right;
   margin-top: 1em;
 }
-/* line 411, sass/main.scss */
+/* line 425, sass/main.scss */
 .map .contact_social ul {
   float: right;
 }
-/* line 418, sass/main.scss */
+/* line 432, sass/main.scss */
 .map .contact_social .contact_icon {
   vertical-align: middle;
   float: left;
   margin: 0 0 0 1em;
 }
-/* line 422, sass/main.scss */
+/* line 436, sass/main.scss */
 .map .contact_social .contact_icon a {
   color: #fff;
   text-decoration: none;
   font-size: 0.9em;
 }
-/* line 426, sass/main.scss */
+/* line 440, sass/main.scss */
 .map .contact_social .contact_icon a img {
   vertical-align: middle;
   height: 2.2em;
   margin: 0 0.4em 0 0;
 }
-/* line 431, sass/main.scss */
+/* line 445, sass/main.scss */
 .map .contact_social .contact_icon a:hover {
   opacity: 0.7;
 }
-/* line 437, sass/main.scss */
+/* line 451, sass/main.scss */
 .map .footer_text {
   width: 100%;
   text-align: center;
 }
-/* line 440, sass/main.scss */
+/* line 454, sass/main.scss */
 .map .footer_text a {
   color: #aaa;
   text-decoration: none;
 }
-/* line 445, sass/main.scss */
+/* line 459, sass/main.scss */
 .map .footer_text .footer_symbol {
   font-family: "SSSymbolicons";
   font-style: normal;
@@ -1113,41 +1134,41 @@ body {
   vertical-align: middle;
 }
 
-/* line 455, sass/main.scss */
+/* line 469, sass/main.scss */
 .no-bullets {
   list-style: none;
   padding: 0;
 }
 
-/* line 462, sass/main.scss */
+/* line 476, sass/main.scss */
 svg {
   width: 100%;
-  height: 80%;
+  height: 96%;
 }
 
-/* line 467, sass/main.scss */
+/* line 481, sass/main.scss */
 line {
   stroke-width: 2px;
   stroke: #9fabb7;
 }
 
-/* line 472, sass/main.scss */
+/* line 486, sass/main.scss */
 g.left text {
   text-anchor: start;
 }
 
-/* line 475, sass/main.scss */
+/* line 489, sass/main.scss */
 g.right text {
   text-anchor: end;
 }
 
-/* line 480, sass/main.scss */
+/* line 494, sass/main.scss */
 text {
   font-family: "ff-meta-web-pro", sans-serif;
   font-size: 0.9em;
 }
 
-/* line 485, sass/main.scss */
+/* line 499, sass/main.scss */
 .head {
   font-weight: bold;
   text-transform: uppercase;
@@ -1155,24 +1176,25 @@ text {
   font-size: 1.1em;
 }
 
-/* line 492, sass/main.scss */
+/* line 506, sass/main.scss */
 circle.marker {
   fill: #9fabb7;
 }
 
-/* line 497, sass/main.scss */
+/* line 511, sass/main.scss */
 path.arrow {
   fill: #9fabb7;
 }
 
-/* line 501, sass/main.scss */
-.test_container {
+/* line 515, sass/main.scss */
+.story_container {
   height: 100%;
-  overflow: hidden;
+  position: relative;
 }
 
-/* line 506, sass/main.scss */
-#timeline {
+/* line 520, sass/main.scss */
+.time_wrap {
+  position: absolute;
   height: 100%;
 }
 

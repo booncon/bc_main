@@ -83,6 +83,7 @@ $fade_opacity: 0.7;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $title_fonts;
+  font-weight: 600;
 }
 
 a {
@@ -101,6 +102,7 @@ body {
   line-height: 1.5;
   background-color: $color_body;
   color: $color_font;
+  -webkit-font-smoothing: antialiased;
 }
 
 #topbar {
@@ -143,7 +145,7 @@ body {
   .main_menu {
     float: right;
     ul {
-      margin: 0;
+      margin: 1.6em 0 0;
       height: 100%;
       padding: 0;
       li {
@@ -166,9 +168,13 @@ body {
     top: 0;
     height: 2.6em;
     display: none;
+    opacity: 0;
     &.shown {
       display: block;
-      @include transition(all 0.5s);
+    }
+    &.fade {
+      opacity: 1;
+      @include transition(opacity 0.5s);
     }
     margin-bottom: 0;
     position: fixed;
@@ -177,7 +183,8 @@ body {
     z-index: 99;
     @include transition(all 0.2s);
     .main_menu {      
-      ul {        
+      ul {
+        margin-top: 0em;     
         li {          
           a {
             color: #fff;
@@ -192,8 +199,15 @@ body {
 
 .section_title {
   margin: 0 0 1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.88em;
+  color: $color_bc;
 }
-
+h2 {
+  font-size: 1.4em;
+  color: $color_bc;
+}
 .normal_text {
   font-size: 1.2em;
 }
@@ -461,7 +475,7 @@ body {
 
 svg {
   width: 100%;
-  height: 80%;
+  height: 96%;
 }
 
 line {
@@ -498,13 +512,13 @@ path.arrow {
   fill: lighten($color_bc, 40%);
 }
 
-.test_container {
+.story_container {
   height: 100%;
-  overflow: hidden;
+  position: relative;
 }
 
-#timeline {
-  //max-height: 500px;
+.time_wrap {
+  position: absolute;
   height: 100%;
 }
 

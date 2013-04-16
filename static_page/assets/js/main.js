@@ -124,9 +124,9 @@ function initContainerSizes() {
 function menuSwap(scroll_pos) {
   var offset = 100;
   if (scroll_pos >= offset) {
-    $('.header-container.floating').addClass('shown');
+    $('.header-container.floating').addClass('shown').addClass('fade');
   } else {
-    $('.header-container.floating').removeClass('shown');
+    $('.header-container.floating').removeClass('fade').removeClass('shown');
   }
 }
 
