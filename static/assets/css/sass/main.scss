@@ -28,7 +28,8 @@
    ========================================================================== */
 
 $body_fonts: "ff-meta-web-pro", sans-serif;
-$title_fonts: "proxima-nova",sans-serif;
+$title_fonts: "proxima-nova", sans-serif;
+$special_fonts: "ratio", sans-serif;
 
 $color_body: #fff;
 $color_font: #333;
@@ -62,7 +63,7 @@ $fade_opacity: 0.7;
 
 @mixin line-overlay($z-index: 99) {
   &:after {
-    background: rgba(230,230,230,0.40) url(../gfx/stripe_white.png);
+    background: rgba(240,240,240,0.62) url(../gfx/stripe_white.png);
     content: ' ';
     width: 100%;
     height: 100%;
@@ -202,11 +203,11 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 1.88em;
-  color: $color_bc;
+  color: lighten($color_bc, 4%);
 }
 h2 {
   font-size: 1.4em;
-  color: $color_bc;
+  color: lighten($color_bc, 4%);
 }
 .normal_text {
   font-size: 1.2em;
@@ -216,9 +217,8 @@ h2 {
   @include line-overlay(4);
 }
 
-
 .parallax_wrapper {
-  height: 600px;
+  height: 580px;
   overflow: hidden;
   position: relative;
 }
@@ -231,14 +231,15 @@ h2 {
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
-  color: $color_bc;
-  text-shadow: 0 0 20px rgba(255,255,255,0.4);
+  color: darken($color_bc, 10%);
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
   text-align: center;
   font-size: 72px;
-  font-weight: 100;
+  font-weight: 600;
   line-height: 80px;
-  font-family: "katarine-web", sans-serif;
-  font-style: italic;
+  font-family: $special_fonts;
+  //font-style: italic;
+  //text-transform: uppercase;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -462,7 +463,6 @@ h2 {
     }
 
     .footer_symbol {
-      @include icon-font;
       font-size: 120%;
       color: lighten($color_bc, 60%);
       vertical-align: middle;
@@ -474,6 +474,10 @@ h2 {
 .no-bullets {
   list-style: none;
   padding: 0;
+}
+
+.ss-icon {
+  @include icon-font;
 }
 
 
