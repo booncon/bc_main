@@ -1,5 +1,6 @@
 @import "h5bp";
 @import "compass";
+@import "_media-queries";
 @import "_responsive_layout";
 
 @include h5bp-normalize;
@@ -30,6 +31,8 @@
 $body_fonts: "ff-meta-web-pro", sans-serif;
 $title_fonts: "proxima-nova", sans-serif;
 $special_fonts: "ratio", sans-serif;
+
+$tablet_font_resize: 0.9em;
 
 $color_body: #fff;
 $color_font: #333;
@@ -63,7 +66,7 @@ $fade_opacity: 0.7;
 
 @mixin line-overlay($z-index: 99) {
   &:after {
-    background: rgba(240,240,240,0.62) url(../gfx/stripe_white.png);
+    background: rgba(240,240,240,0.54) url(../gfx/stripe_white.png);
     content: ' ';
     width: 100%;
     height: 100%;
@@ -104,6 +107,9 @@ body {
   background-color: $color_body;
   color: $color_font;
   -webkit-font-smoothing: antialiased;
+  @include tablet-only {
+    font-size: $tablet_font_resize;
+  }
 }
 
 #topbar {
@@ -137,11 +143,11 @@ body {
 .header-container {
   margin-bottom: 1em;
   padding: 0.4em 0;
-  height: 5.4em;
+  height: 5.4em;  
   .main_logo {
     height: 100%;
     padding: 0.1em 0;
-    float: left;
+    float: left;    
   }
   .main_menu {
     float: right;
@@ -165,7 +171,16 @@ body {
       }
     }
   }
+  @include tablet-only {
+    height: 3.6em;
+    .main_menu ul { 
+      margin: 0.82em 0 0;
+    }
+  }
   &.floating {
+    @include tablet-only {
+      display: none !important;
+    }  
     top: 0;
     height: 2.6em;
     display: none;
@@ -213,37 +228,46 @@ h2 {
   font-size: 1.2em;
 }
 
-.welcome {
-  @include line-overlay(4);
-}
+
 
 .parallax_wrapper {
+  &.welcome {
+    @include line-overlay(4);
+  }
   height: 580px;
   overflow: hidden;
   position: relative;
+  @include tablet-only {
+    height: 240px;
+  }
 }
 
-.big_pic {
-  display: none;
+.header_pic {
   width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  display: none;
+  position: absolute;
+  top: 0;
 }
 
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
   color: darken($color_bc, 10%);
-  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   text-align: center;
-  font-size: 72px;
+  font-size: 3.6em;
   font-weight: 600;
-  line-height: 80px;
+  line-height: 1;
   font-family: $special_fonts;
-  //font-style: italic;
-  //text-transform: uppercase;
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 5;
+  @include tablet-only {
+    font-size: 2.4em;
+  }  
 }
 
 .link_buttons {
@@ -377,7 +401,6 @@ h2 {
 }
 
 .map {
-  background-color: $color_bc;
   background-image: url(../gfx/Helsinki.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -485,6 +508,9 @@ h2 {
 svg {
   width: 100%;
   height: 96%;
+  @include tablet-only {
+    font-size: 0.9em;
+  }  
 }
 
 line {

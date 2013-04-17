@@ -56,8 +56,8 @@
     </div>
 
     <div class="parallax_wrapper welcome">
-      <h2 class="main_slogan"><div class="parallax" data-anim_type="">booncon is Rocket Science</div></h2>
-      <img src="assets/img/slider_pics/plant.jpg" alt="Logo booncon" data-anim_type="anti" class="big_pic" />
+      <h2 class="main_slogan">booncon is Rocket Science</h2>
+      <div class="header_pic" style="background-image: url('assets/img/slider_pics/books.jpg')"></div>
     </div>
 
     <div class="main-container content_section">
@@ -77,7 +77,7 @@
       </div>
     </div>
     <div class="main-container content_section">
-      <div class="main">
+      <div class="main_full">
         <article>
           <h1 id="how" class="section_title">How we work</h1>
           <section>
@@ -89,7 +89,7 @@
       </div>
     </div>   
     <div class="main-container content_section">
-      <div class="main">
+      <div class="main left_column">
         <article>
           <h1 id="who" class="section_title">Who we are</h1>
           <section>
@@ -168,7 +168,7 @@
           </section>
         </article>        
       </div>
-      <aside>
+      <aside class="right_column">
         <p class="normal_text">
         Wir sind ein junges internationales Team und wollen neue Welten entdecken.<br/> Bist auch du bereit für ein Abenteuer, dann bewirb dich bei uns:          
         </p>
@@ -177,10 +177,10 @@
         </ul>
       </aside>
     </div>
-    <div class="main-container content_section story_container">
-      <div class="main">
-        <h1 id="when" class="section_title">How we work</h1>
-        <article class="story_text">          
+    <div class="main-container content_section story_container">      
+      <div class="main left_column">
+        <h1 id="when" class="section_title">How it started</h1>    
+        <article class="story_text">       
           <section class="normal_text">             
               <h2>Die Gefährten</h2>
               <p>Alles begann im Sommer 2010, als wir, Sven, Tobias und Lukas, quer über Europa verteilt arbeiteten.</p>
@@ -200,9 +200,9 @@
             </section>          
         </article>        
       </div>
-      <aside class="time_wrap">
+      <aside class="right_column time_wrap">
         <div id="timeline"></div>
-      </aside>
+      </aside>    
     </div>
     <div class="main-container content_section" id="Partners">   
       <div class="main_full">
@@ -216,7 +216,7 @@
     <footer id="contact" class="map">
       <div class="contact_wrap">
         <div class="main-container">
-            <article class="contact">         
+            <article class="contact">     
               <article class="text_right">              
                 <div class="section_block" id="contact">   
                   <div class="span_24 clr">
@@ -227,7 +227,7 @@
                   </div>
                 </div>
                 <br>
-                <a href="mailto:pixels@booncon.com" class="contact_link">hello@booncon.com</a>
+                <a href="mailto:pixels@booncon.com" class="contact_link">hi@booncon.com</a>
                 <div class="contact_phone">+358 45 8980609</div>                 
                 <div class="contact_social">
                   <ul class="no-bullets">
@@ -273,7 +273,7 @@
 
       var slider_pics = new Array('books', 'console', 'keyboard', 'magnets', 'pi', 'plant', 'whiteboard');
 
-      $('.big_pic').attr('src', 'assets/img/slider_pics/' + slider_pics[Math.round(Math.random()*(slider_pics.length - 1))] + '.jpg').fadeIn(100);
+      $('.header_pic').css('background-image', 'url(assets/img/slider_pics/' + slider_pics[Math.round(Math.random()*(slider_pics.length - 1))] + '.jpg)').fadeIn(100);
 
       var time_wrap_width = $('#timeline').width();
       var time_wrap_height = $('.story_text').height();

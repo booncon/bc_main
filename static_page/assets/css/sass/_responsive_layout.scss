@@ -21,15 +21,26 @@ $zen-auto-include-item-base: false;
 
 
 .main {
-  @include zen-grid-item-base();
-  @include zen-grid-item(5, 1);
+  @include zen-grid-item-base();  
+  &.right_column {
+    @include zen-grid-item(5, 3);
+  }
+  &.left_column {
+    @include zen-grid-item(5, 1);
+  }
 }
 .main_full {
   @include zen-grid-item-base();
   @include zen-grid-item(7, 1);
+  @include zen-clear;
 }
 
 aside {
   @include zen-grid-item-base();
-  @include zen-grid-item(2, 6);
+  &.right_column {
+    @include zen-grid-item(2, 6);
+  }
+  &.left_column {
+    @include zen-grid-item(2, 1);
+  }
 }
