@@ -1,7 +1,0 @@
-<article>
-  <div class="wallpaper with_caption" style="background-image: url([[++base_url]][[+content]]);"></div>
-  <div class="caption">
-    [[$projectOverviewCaption]]
-  </div>
-  <div class="clear"></div>
-</article> 

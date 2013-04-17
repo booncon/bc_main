@@ -1,0 +1,10 @@
+<nav class="main_menu">
+  <ul>
+    <li><a class="anchor_link" href="#what">[[*menu_what]]</a></li>
+    <li><a class="anchor_link" href="#how">[[*menu_how]]</a></li>
+    <li><a class="anchor_link" href="#who">[[*menu_who]]</a></li>
+    <li><a class="anchor_link" href="#history">[[*menu_history]]</a></li>
+    <li><a class="anchor_link" href="#partner">[[*menu_partner]]</a></li>
+    <li><a class="anchor_link" href="#contact">[[*menu_contact]]</a></li>
+  </ul>
+</nav>

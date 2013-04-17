@@ -1,1 +1,0 @@
-<li[[+wf.id]][[+wf.classes]]><a href="#[[+machinename]]" title="[[+wf.title]]" [[+wf.attributes]]>[[+wf.linktext]]</a>[[+wf.wrapper]]</li>

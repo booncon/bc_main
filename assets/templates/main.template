@@ -26,11 +26,7 @@
         <header class="clearfix">
           <h1 class="title visuallyhidden">booncon</h1>                
           <a href="#top"><img src="assets/gfx/logo_bc-main.svg" alt="Logo booncon" class="main_logo" /></a>
-          <nav class="main_menu">
-            <ul>
-              [[Wayfinder? &startId=`[[*id]]` &rowTpl=`mainMenuItem`]]
-            </ul>
-          </nav>
+          [[$navigation]]
         </header>
       </div>
     </div>
@@ -38,34 +34,56 @@
       <div class="main-container">
         <header class="clearfix">             
           <a href="#top"><img src="assets/gfx/logo_bc-main-invert.svg" alt="Logo booncon" class="main_logo" /></a>
-          <nav class="main_menu">
-            <ul>
-              [[Wayfinder? &startId=`[[*id]]` &rowTpl=`mainMenuItem`]]
-            </ul>
-          </nav>
+          [[$navigation]]
         </header>
       </div>
     </div>
 
     <div class="parallax_wrapper welcome">
-      <h2 class="main_slogan">booncon is Rocket Science</h2>
+      <h2 class="main_slogan">[[*slogan]]</h2>
       <div class="header_pic" style="background-image: url('assets/img/slider_pics/books.jpg')"></div>
     </div>
 
-    [[!getResources:default=``? &parents=`[[*id]]` &resources=`-[[BabelTranslation? &resourceId=`69` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tplCondition=`sectionType` &conditionalTpls=`{"":"sectionSimple", "simple":"sectionSimple", "who":"sectionWho"}` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20` ]]
-   
+    <div class="main-container content_section">
+      <div class="main_full">
+        <article>
+          <h1 id="what" class="section_title">[[*title_what]]</h1>
+          <section>
+            <p class="normal_text">
+              [[*content_what]]
+            </p>
+            <ul class="link_buttons">
+              <li class="pixels"><a href="http://pixels.booncon.com" target="_blank">booncon PIXELS</a></li>
+              <li class="rockets"><a href="http://rockets.booncon.com" target="_blank">booncon ROCKETS</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="main-container content_section">
+      <div class="main_full">
+        <article>
+          <h1 id="how" class="section_title">[[*title_how]]</h1>
+          <section>
+            <p class="normal_text">
+              [[*content_how]]
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>   
     <div class="main-container content_section">
       <div class="main left_column">
         <article>
-          <h1 id="who" class="section_title">Who we are</h1>
+          <h1 id="who" class="section_title">[[*title_who]]</h1>
           <section>
-            
+            [[!getResources:default=``? &parents=`[[BabelTranslation? &resourceId=`155` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tpl=`companion` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20`]]
           </section>
         </article>        
       </div>
       <aside class="right_column">
         <p class="normal_text">
-        Wir sind ein junges internationales Team und wollen neue Welten entdecken.<br/> Bist auch du bereit für ein Abenteuer, dann bewirb dich bei uns:          
+        [[*text_apply]]         
         </p>
         <ul class="link_buttons">
           <li class="jobs"><a href="http://jobs.booncon.com" target="_blank">booncon jobs</a></li>
@@ -74,34 +92,18 @@
     </div>
     <div class="main-container content_section story_container">      
       <div class="main left_column">
-        <h1 id="when" class="section_title">How it started</h1>    
+        <h1 id="history" class="section_title">[[*title_history]]</h1>    
         <article class="story_text">       
-          <section class="normal_text">             
-              <h2>Die Gefährten</h2>
-              <p>Alles begann im Sommer 2010, als wir, Sven, Tobias und Lukas, quer über Europa verteilt arbeiteten.</p>
-              <p>In uns herrschte der Wunsch nach etwas Neuem. Wir waren auf der Suche nach einem Arbeitsumfeld, das über die Arbeit hinausgeht.  </p>
-              <p>Wir sind Kinder des Internets: Überall und nirgendwo zuhause, wollten wir gemeinsam etwas auf die Beine stellen.</p>
-              <p>Von der nordischen Kultur und ihrer Schlichtheit schon immer fasziniert, zog es uns nach Skandinavien.</br>
-  Helsinki befand sich so wie wir im Aufbruch und war deshalb der ideale Ort für unser Vorhaben.</p>
-              <p>Helsinkis Start-up-freundliches Umfeld ermöglichte uns eine Partnerschaft mit der Aalto Design Factory, in der wir im Herbst 2011 unsere Zelte aufschlugen.</p>
-              <p>booncon wurde Wirklichkeit und die Arbeit begann.</p>  
-            </section>
-            <section class="normal_text">
-              <h2>Die zweite Stufe</h2>
-              <p>Die Zusammenarbeit mit finnischen und internationalen Unternehmen und der Austausch mit hochmotivierten Studenten beflügelte uns.</p>
-              <p>Steigende Aufträge und ein wachsendes Team zeigten, dass unsere zentrale Idee eines freundschaftlichen Arbeitsumfelds aufging.
-  Voller Tatendrang bezogen wir im Herbst 2012 unser neues Büro im Herzen Helsinkis.</p>
-              <p>Um noch fokussierter an den verschiedenen Projekten arbeiten zu können, haben wir booncon in zwei eigenständige Sparten aufgeteilt: booncon PIXELS und booncon ROCKETS.</p>
-            </section>          
+          [[*content_history]]         
         </article>        
       </div>
       <aside class="right_column time_wrap">
         <div id="timeline"></div>
       </aside>    
     </div>
-    <div class="main-container content_section" id="Partners">   
+    <div class="main-container content_section">   
       <div class="main_full">
-        <h1 id="partners" class="section_title">Partners</h1>
+        <h1 id="partner" class="section_title">[[*title_partner]]</h1>
         <ul class="no-bullets">
           <li class="partner_logo"><a href="http://www.designdistrict.fi/" target="_blank"><img src="assets/img/logo_design-district.svg" alt="Logo Helsinki Design District"></a></li>
           <li class="partner_logo"><a href="http://designfactory.aalto.fi/" target="_blank"><img src="assets/img/logo-df.svg" alt="Logo Aalto Design Factory"></a></li>
@@ -115,9 +117,9 @@
               <article class="text_right">              
                 <div class="section_block" id="contact">   
                   <div class="span_24 clr">
-                    <h3 class="contact_title text_right">Say hello.</h3>
+                    <h3 class="contact_title text_right">[[*title_contact]]</h3>
                       <div class="text_right">
-                        We would be happy to get to know you<br> and create something beautiful together.
+                        [[*content_contact]]
                       </div>
                   </div>
                 </div>
@@ -142,7 +144,7 @@
             </article>
             <div class="clearfix"></div>
             <article class="footer_text">
-              <a href="http://booncon.com" target="_blank"><span class="ss-icon footer_symbol">genius</span> from Helsinki</a>
+              <a href="http://booncon.com" target="_blank">[[*footer]]</a>
             </article>
         </div>
       </div>
@@ -160,12 +162,8 @@
         s.parentNode.insertBefore(g,s)}(document,'script'));
       */
 
-        var data = [
-        { head: 'Jun 2010', body: 'Idea booncon', img: 'assets/img/time_idea.jpg' },
-        { head: 'Sep 2011', body: 'Foundation + ADF', img: 'assets/img/time_office_df.jpg' },
-        { head: 'Sep 2012', body: 'Office Helsinki', img: 'assets/img/time_office_hki.jpg' },
-        { head: 'Jan 2013', body: 'New companions', img: 'assets/img/time_new_companions.jpg' },
-        { head: 'Mar 2013', body: 'Pixels & Rockets', img: 'assets/img/time_pixels_rockets.jpg' }
+      var data = [
+        [[!getResources:default=``? &parents=`[[BabelTranslation? &resourceId=`164` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tpl=`history_event` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &outputSeparator=`, ` &limit=`20`]]
       ];
 
       var slider_pics = new Array('books', 'console', 'keyboard', 'magnets', 'pi', 'plant', 'whiteboard');
