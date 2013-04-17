@@ -1,6 +1,6 @@
 <div class="hover panel">
-    <div class="front side" style="background-image: url([[+tv.companion_image_front]]);"></div>
-    <div class="back side" style="background-image: url([[+tv.companion_image_back]]);">
+    <div class="front side" style="background-image: url([[+tv.companion_image_back]]);"></div>
+    <div class="back side" style="background-image: url([[+tv.companion_image_front]]);">
         <div class="pad">
             <h2>[[+pagetitle]]</h2>
             <h3>[[+description]]<h3>
