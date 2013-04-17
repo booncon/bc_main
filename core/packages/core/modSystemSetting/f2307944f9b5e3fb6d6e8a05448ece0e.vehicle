@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9b744f5a8159cf9eb2380ab9fb017b97',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f2307944f9b5e3fb6d6e8a05448ece0e',
+  'native_key' => 'form_customization_use_all_groups',
+  'object' => '{"key":"form_customization_use_all_groups","value":false,"xtype":"combo-boolean","namespace":"core","area":"manager","editedon":null}',
+);

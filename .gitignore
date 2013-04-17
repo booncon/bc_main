@@ -1,0 +1,26 @@
+# general file types #
+*.zip
+*.tar.gz
+*.tar
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.sass-cache/
+
+# project specific directories #
+################################
+core/cache
+core/config
+!core/cache/.gitignore
+!core/cache/components/.gitignore
+core/config/*
+!core/config/config.inc.php.sample
+.htaccess

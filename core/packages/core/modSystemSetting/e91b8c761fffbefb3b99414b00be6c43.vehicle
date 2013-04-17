@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '83e9cd90ae895faf547c3a95ea23b6df',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e91b8c761fffbefb3b99414b00be6c43',
+  'native_key' => 'upload_maxsize',
+  'object' => '{"key":"upload_maxsize","value":"1048576","xtype":"textfield","namespace":"core","area":"file","editedon":null}',
+);

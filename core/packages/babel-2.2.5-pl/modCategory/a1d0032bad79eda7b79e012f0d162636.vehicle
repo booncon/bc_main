@@ -1,0 +1,70 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'db686bfd6dab6524800e2d809fcce665' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"name":"BabelLinks","description":"Displays links to translated resources.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * Babel\\n *\\n * Copyright 2010 by Jakob Class <jakob.class@class-zec.de>\\n *\\n * This file is part of Babel.\\n *\\n * Babel is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * Babel is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Babel; if not, write to the Free Software Foundation, Inc., 59 Temple Place,\\n * Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package babel\\n *\\/\\n\\/**\\n * BabelLinks snippet to display links to translated resources\\n * \\n * Based on ideas of Sylvain Aerni <enzyms@gmail.com>\\n *\\n * @author Jakob Class <jakob.class@class-zec.de>\\n *\\n * @package babel\\n * \\n * @param resourceId\\t\\toptional: id of resource of which links to translations should be displayed. Default: current resource\\n * @param tpl\\t\\t\\t\\toptional: Chunk to display a language link. Default: babelLink\\n * @param activeCls\\t\\t\\toptional: CSS class name for the current active language. Default: active\\n * @param showUnpublished\\toptional: flag whether to show unpublished translations. Default: 0\\n * @param showCurrent\\t\\toptional: flag whether to show a link to a translation of the current language. Default: 1\\n *\\/\\n$babel = $modx->getService(\'babel\',\'Babel\',$modx->getOption(\'babel.core_path\',null,$modx->getOption(\'core_path\').\'components\\/babel\\/\').\'model\\/babel\\/\',$scriptProperties);\\n\\nif (!($babel instanceof Babel)) return;\\n\\n\\/* be sure babel TV is loaded *\\/\\nif(!$babel->babelTv) return;\\n\\n\\/* get snippet properties *\\/\\n$resourceId = $modx->resource->get(\'id\');\\nif(!empty($scriptProperties[\'resourceId\'])) {\\n\\t$resourceId = intval($modx->getOption(\'resourceId\',$scriptProperties,$resourceId));\\n}\\n$tpl = $modx->getOption(\'tpl\',$scriptProperties,\'babelLink\');\\n$activeCls = $modx->getOption(\'activeCls\',$scriptProperties,\'active\');\\n$showUnpublished = $modx->getOption(\'showUnpublished\',$scriptProperties,0);\\n$showCurrent = $modx->getOption(\'showCurrent\',$scriptProperties,1);\\n\\nif($resourceId == $modx->resource->get(\'id\')) {\\n\\t$contextKeys = $babel->getGroupContextKeys($modx->resource->get(\'context_key\'));\\n} else {\\n\\t$resource = $modx->getObject(\'modResource\', $resourceId);\\n\\tif(!$resource) {\\n\\t\\treturn;\\n\\t}\\n\\t$contextKeys = $babel->getGroupContextKeys($resource->get(\'context_key\'));\\n}\\n\\n$linkedResources = $babel->getLinkedResources($resourceId);\\n\\n$output = \'\';\\nforeach($contextKeys as $contextKey) {\\n\\tif(!$showCurrent && $contextKey == $modx->resource->get(\'context_key\')) {\\n\\t\\tcontinue;\\n\\t}\\n\\t$context = $modx->getObject(\'modContext\', array(\'key\' => $contextKey));\\n\\tif(!$context) {\\n\\t\\t$modx->log(modX::LOG_LEVEL_ERROR, \'Could not load context: \'.$contextKey);\\n\\t\\tcontinue;\\n\\t}\\n\\t$context->prepare();\\n\\t$cultureKey = $context->getOption(\'cultureKey\',$modx->getOption(\'cultureKey\'));\\n\\t$translationAvailable = false;\\n\\tif(isset($linkedResources[$contextKey])) {\\n\\t\\t$resource = $modx->getObject(\'modResource\',$linkedResources[$contextKey]);\\n\\t\\tif($resource && ($showUnpublished || $resource->get(\'published\') == 1)) {\\n\\t\\t\\t$translationAvailable = true;\\n\\t\\t}\\n\\t}\\n\\tif($translationAvailable) {\\n\\t\\t$url = $context->makeUrl($linkedResources[$contextKey],\'\',\'full\');\\n\\t} else {\\n\\t\\t$url = $context->getOption(\'site_url\', $modx->getOption(\'site_url\'));\\n\\t}\\n\\t$active = ($modx->resource->get(\'context_key\') == $contextKey) ? $activeCls : \'\';\\n\\t$placeholders = array(\\n\\t\\t\'cultureKey\' => $cultureKey,\\n\\t\\t\'url\' => $url,\\n\\t\\t\'active\' => $active,\\n\\t\\t\'id\' => $translationAvailable? $linkedResources[$contextKey] : \'\');\\n\\t$output .= $babel->getChunk($tpl,$placeholders);\\n}\\n  \\nreturn $output;","locked":0,"properties":"a:5:{s:10:\\"resourceId\\";a:6:{s:4:\\"name\\";s:10:\\"resourceId\\";s:4:\\"desc\\";s:21:\\"babellinks.resourceId\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}s:3:\\"tpl\\";a:6:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:14:\\"babellinks.tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:9:\\"babelLink\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}s:9:\\"activeCls\\";a:6:{s:4:\\"name\\";s:9:\\"activeCls\\";s:4:\\"desc\\";s:20:\\"babellinks.activeCls\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:6:\\"active\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}s:15:\\"showUnpublished\\";a:6:{s:4:\\"name\\";s:15:\\"showUnpublished\\";s:4:\\"desc\\";s:26:\\"babellinks.showUnpublished\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:1:\\"0\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}s:11:\\"showCurrent\\";a:6:{s:4:\\"name\\";s:11:\\"showCurrent\\";s:4:\\"desc\\";s:22:\\"babellinks.showCurrent\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:1:\\"1\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}}","moduleguid":""}',
+        'guid' => 'ece752f93b29f154fa9315194fe6a295',
+        'native_key' => 0,
+        'signature' => '48b667ed400fb3bdb63ecb1bc717ae56',
+      ),
+      '0c7c71078eb38961d6cbd19765044e71' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"name":"BabelTranslation","description":"Returns the id of a translated resource in a given context.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * Babel\\n *\\n * Copyright 2010 by Jakob Class <jakob.class@class-zec.de>\\n *\\n * This file is part of Babel.\\n *\\n * Babel is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * Babel is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Babel; if not, write to the Free Software Foundation, Inc., 59 Temple Place,\\n * Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package babel\\n *\\/\\n\\/**\\n * BabelTranslation snippet to get the id of a translated resource in a given context.\\n *\\n * @author Jakob Class <jakob.class@class-zec.de>\\n *\\n * @package babel\\n * \\n * @param resourceId\\t\\toptional: id of resource of which a translated resource should be determined. Default: current resource\\n * @param contextKey\\t\\tKey of context in which translated resource should be determined.\\n * @param showUnpublished\\toptional: flag whether to show unpublished translations. Default: 0\\n *\\/\\n$babel = $modx->getService(\'babel\',\'Babel\',$modx->getOption(\'babel.core_path\',null,$modx->getOption(\'core_path\').\'components\\/babel\\/\').\'model\\/babel\\/\',$scriptProperties);\\n\\nif (!($babel instanceof Babel)) return;\\n\\n\\/* be sure babel TV is loaded *\\/\\nif(!$babel->babelTv) return;\\n\\n\\/* get snippet properties *\\/\\n$resourceId = $modx->resource->get(\'id\');\\nif(!empty($scriptProperties[\'resourceId\'])) {\\n\\t$resourceId = intval($modx->getOption(\'resourceId\',$scriptProperties,$resourceId));\\n}\\n$contextKey = $modx->getOption(\'contextKey\',$scriptProperties,\'\');\\n$showUnpublished = $modx->getOption(\'showUnpublished\',$scriptProperties,0);\\n\\n\\/* determine id of tranlated resource *\\/\\n$linkedResources = $babel->getLinkedResources($resourceId);\\n$output = null;\\nif(isset($linkedResources[$contextKey])) {\\n\\t$resource = $modx->getObject(\'modResource\',$linkedResources[$contextKey]);\\n\\tif($resource && ($showUnpublished || $resource->get(\'published\') == 1)) {\\n\\t\\t$output = $resource->get(\'id\');\\n\\t}\\n}\\nreturn $output;","locked":0,"properties":"a:3:{s:10:\\"resourceId\\";a:6:{s:4:\\"name\\";s:10:\\"resourceId\\";s:4:\\"desc\\";s:27:\\"babeltranslation.resourceId\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}s:10:\\"contextKey\\";a:6:{s:4:\\"name\\";s:10:\\"contextKey\\";s:4:\\"desc\\";s:27:\\"babeltranslation.contextKey\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}s:15:\\"showUnpublished\\";a:6:{s:4:\\"name\\";s:15:\\"showUnpublished\\";s:4:\\"desc\\";s:32:\\"babeltranslation.showUnpublished\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:1:\\"0\\";s:7:\\"lexicon\\";s:16:\\"babel:properties\\";}}","moduleguid":""}',
+        'guid' => 'a920123f132985c511e8dcab8f6db2bc',
+        'native_key' => 0,
+        'signature' => 'adeea565ed98b4c3ad91ce85ffb5a756',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'babel',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"babel-2.2.5-pl\\/modCategory\\/a1d0032bad79eda7b79e012f0d162636\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"babel"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"babel-2.2.5-pl\\/modCategory\\/a1d0032bad79eda7b79e012f0d162636\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"babel"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"babel-2.2.5-pl\\/modCategory\\/a1d0032bad79eda7b79e012f0d162636.setupoptions.resolver.resolver","type":"php","name":"setupoptions.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '84b28b4467f24035cb42f3eb0c607bbd',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'a1d0032bad79eda7b79e012f0d162636',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Babel"}',
+);

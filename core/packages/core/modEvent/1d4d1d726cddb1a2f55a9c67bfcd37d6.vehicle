@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7476302d7bc51442808ae651066f8d92',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '1d4d1d726cddb1a2f55a9c67bfcd37d6',
+  'native_key' => 'OnChunkSave',
+  'object' => '{"name":"OnChunkSave","service":1,"groupname":"Chunks"}',
+);

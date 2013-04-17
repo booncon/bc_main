@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f2c86eddd27016fdafcbe5767e586a25',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e6cf0f31e1d15b1aa3a35d02a7f900d9',
+  'native_key' => 'cache_db_session_lifetime',
+  'object' => '{"key":"cache_db_session_lifetime","value":"","xtype":"textfield","namespace":"core","area":"caching","editedon":null}',
+);

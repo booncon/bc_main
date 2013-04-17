@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '55b9d91e1b6379cd8b499ea41966d02e',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '00303cf73d69e7568a25711e91829279',
+  'native_key' => 'OnUserDuplicate',
+  'object' => '{"name":"OnUserDuplicate","service":1,"groupname":"Users"}',
+);

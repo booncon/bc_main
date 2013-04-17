@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2c19a7c28264067d0a5eae3e5a7b6f4e',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '047a23451acbaaef4a0de2e15bf957a2',
+  'native_key' => 'OnFileCreateFormPrerender',
+  'object' => '{"name":"OnFileCreateFormPrerender","service":1,"groupname":"System"}',
+);
