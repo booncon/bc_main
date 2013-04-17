@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9af87c7fc9bc21b1ec7347b77219cb58',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd3d08bf583053265844ac62d58e2fd2f',
+  'native_key' => 'cache_lang_js',
+  'object' => '{"key":"cache_lang_js","value":"1","xtype":"combo-boolean","namespace":"core","area":"caching","editedon":null}',
+);

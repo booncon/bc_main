@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8c3f0b8da8e04b33cd726a491ebf2d0f',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '8b05792d7cb3967391be8feeb9092d26',
+  'native_key' => 'OnBeforeUserActivate',
+  'object' => '{"name":"OnBeforeUserActivate","service":1,"groupname":"Users"}',
+);

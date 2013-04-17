@@ -1,0 +1,130 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'e703b2808f246c8c66d98167ad660b8a' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+        'guid' => '1a8e23961ec25512ec607dfba8b6cdb2',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocFormPrerender',
+        ),
+        'signature' => '79b1bb8be3d731f4aa39aa7f800463f9',
+      ),
+      'e15da227f060ee983a656c692506ef41' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocFormSave","priority":0,"propertyset":0}',
+        'guid' => 'af7f3809848c7d079949d494a287f447',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocFormSave',
+        ),
+        'signature' => '7c74491e75eb719022053ce01d6bca55',
+      ),
+      'f94b31afbceccc6a0e5aa1b4ad0d715b' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnEmptyTrash","priority":0,"propertyset":0}',
+        'guid' => '553b105fcf247105343105c4d84744ce',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnEmptyTrash',
+        ),
+        'signature' => 'e86c2f5ef59ee67bf99639383d72ac79',
+      ),
+      '7818d6fba3b0a6130cfff51fcd067bf5' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnContextRemove","priority":0,"propertyset":0}',
+        'guid' => '899071b1e82231f718675c5276d231f7',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnContextRemove',
+        ),
+        'signature' => '8e6d0c349ed07a61852785cafad6cdad',
+      ),
+      '3d579b2cd526e9419bfdbda61e3e657f' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnResourceDuplicate","priority":0,"propertyset":0}',
+        'guid' => '0b8c1d7d9707c4d18e934011f35d7b09',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnResourceDuplicate',
+        ),
+        'signature' => 'cad35f77d7f8256ef30ad0ff537e04b1',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'babel',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4c746148ffb3a005143cb7a074e7c909',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => '04cbd958b69c7ee2bef883c466bab7bd',
+  'native_key' => 1,
+  'object' => '{"id":1,"name":"Babel","description":"Links and synchronizes multilingual resources.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * Babel\\n *\\n * Copyright 2010 by Jakob Class <jakob.class@class-zec.de>\\n *\\n * This file is part of Babel.\\n *\\n * Babel is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * Babel is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Babel; if not, write to the Free Software Foundation, Inc., 59 Temple Place,\\n * Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package babel\\n *\\/\\n\\/**\\n * Babel Plugin to link and synchronize multilingual resources\\n * \\n * Based on ideas of Sylvain Aerni <enzyms@gmail.com>\\n *\\n * Events:\\n * OnDocFormPrerender,OnDocFormSave,OnEmptyTrash,OnContextRemove,OnResourceDuplicate\\n *\\n * @author Jakob Class <jakob.class@class-zec.de>\\n *\\n * @package babel\\n * \\n *\\/\\n\\n$babel = $modx->getService(\'babel\',\'Babel\',$modx->getOption(\'babel.core_path\',null,$modx->getOption(\'core_path\').\'components\\/babel\\/\').\'model\\/babel\\/\',$scriptProperties);\\n\\nif (!($babel instanceof Babel)) return;\\n\\n\\/* be sure babel TV is loaded *\\/\\nif(!$babel->babelTv) return;\\n\\nswitch ($modx->event->name) {\\n\\tcase \'OnDocFormPrerender\':\\n\\t\\t$output = \'\';\\n\\t\\t$errorMessage = \'\';\\n\\t\\t$resource =& $modx->event->params[\'resource\'];\\n\\t\\tif(!$resource) {\\n\\t\\t\\t\\/* a new resource is being to created\\n\\t\\t\\t * -> skip rendering the babel box *\\/\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t\\t$contextKeys = $babel->getGroupContextKeys($resource->get(\'context_key\'));\\n\\t\\t$currentContextKey = $resource->get(\'context_key\');\\n\\t\\t$linkedResources = $babel->getLinkedResources($resource->get(\'id\'));\\n\\t\\tif(empty($linkedResources)) {\\n\\t\\t\\t\\/* always be sure that the Babel TV is set *\\/\\n\\t\\t\\t$babel->initBabelTv($resource);\\n\\t\\t}\\n\\t\\t\\n\\t\\t\\/* grab manager actions IDs *\\/\\n\\t\\t$actions = $modx->request->getAllActionIDs();\\n\\t\\t\\n\\t\\tif(isset($_POST[\'babel-context-key\'])) {\\n\\t\\t\\t\\/* one of the following babel actions has been performed: link, unlink or translate *\\/\\n\\t\\t\\ttry {\\n\\t\\t\\t\\t$contextKey = $_POST[\'babel-context-key\'];\\n\\t\\t\\t\\t\\/* check if context is valid *\\/\\n\\t\\t\\t\\t$context = $modx->getObject(\'modContext\', array(\'key\' => $contextKey));\\n\\t\\t\\t\\tif(!$context) {\\n\\t\\t\\t\\t\\t$errorParameter = array(\'context\' => $contextKey);\\n\\t\\t\\t\\t\\tthrow new Exception(\'error.invalid_context_key\');\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\/* manuallly add or change a translation link *\\/\\n\\t\\t\\t\\tif(isset($_POST[\'babel-link\'])) {\\n\\t\\t\\t\\t\\tif($linkedResources[$contextKey] == $_POST[\'babel-link-target\']) {\\n\\t\\t\\t\\t\\t\\t\\/* target resource is equal to current resource -> nothing to do *\\/\\n\\t\\t\\t\\t\\t\\tthrow new Exception();\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t$targetResource = $modx->getObject(\'modResource\', intval($_POST[\'babel-link-target\']));\\n\\t\\t\\t\\t\\tif(!$targetResource) {\\n\\t\\t\\t\\t\\t\\t\\/* error: resource id is not valid *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'resource\' => htmlentities($_POST[\'babel-link-target\']));\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.invalid_resource_id\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\tif($targetResource->get(\'context_key\') != $contextKey) {\\n\\t\\t\\t\\t\\t\\t\\/* error: resource id of another context has been provided *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\\n\\t\\t\\t\\t\\t\\t\\t\'resource\' => $targetResource->get(\'id\'),\\n\\t\\t\\t\\t\\t\\t\\t\'context\' => $contextKey);\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.resource_from_other_context\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t$targetLinkedResources = $babel->getLinkedResources($targetResource->get(\'id\'));\\n\\t\\t\\t\\t\\tif(count($targetLinkedResources) > 1) {\\n\\t\\t\\t\\t\\t\\t\\/* error: target resource is already linked with other resources *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'resource\' => $targetResource->get(\'id\'));\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.resource_already_linked\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t\\/* add or change a translation link *\\/\\n\\t\\t\\t\\t\\tif(isset($linkedResources[$contextKey])) {\\n\\t\\t\\t\\t\\t\\t\\/* existing link has been changed:\\n\\t\\t\\t\\t\\t\\t * -> reset Babel TV of old resource *\\/\\n\\t\\t\\t\\t\\t\\t$babel->initBabelTvById($linkedResources[$contextKey]);\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t$linkedResources[$contextKey] = $targetResource->get(\'id\');\\n\\t\\t\\t\\t\\t$babel->updateBabelTv($linkedResources, $linkedResources);\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\/* copy values of synchronized TVs to target resource *\\/\\n\\t\\t\\t\\t\\tif(isset($_POST[\'babel-link-copy-tvs\']) && intval($_POST[\'babel-link-copy-tvs\']) == 1) {\\n\\t\\t\\t\\t\\t\\t$babel->sychronizeTvs($resource->get(\'id\'));\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\/* remove an existing translation link *\\/\\n\\t\\t\\t\\tif(isset($_POST[\'babel-unlink\'])) {\\n\\t\\t\\t\\t\\tif(!isset($linkedResources[$contextKey])) {\\n\\t\\t\\t\\t\\t\\t\\/* error: there is no link for this context *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'context\' => $contextKey);\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.no_link_to_context\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\tif($linkedResources[$contextKey] == $resource->get(\'id\')) {\\n\\t\\t\\t\\t\\t\\t\\/* error: (current) resource can not be unlinked from it\'s translations *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'context\' => $contextKey);\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.unlink_of_selflink_not_possible\');\\n\\t\\t\\t\\t\\t}\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t$unlinkedResource = $modx->getObject(\'modResource\', intval($linkedResources[$contextKey]));\\n\\t\\t\\t\\t\\tif(!$unlinkedResource) {\\n\\t\\t\\t\\t\\t\\t\\/* error: invalid resource id *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'resource\' => htmlentities($linkedResources[$contextKey]));\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.invalid_resource_id\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\tif($unlinkedResource->get(\'context_key\') != $contextKey) {\\n\\t\\t\\t\\t\\t\\t\\/* error: resource is of a another context *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\\n\\t\\t\\t\\t\\t\\t\\t\'resource\' => $targetResource->get(\'id\'),\\n\\t\\t\\t\\t\\t\\t\\t\'context\' => $contextKey);\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.resource_from_other_context\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t\\/* unlink resource and reset its Babel TV *\\/\\n\\t\\t\\t\\t\\t$babel->initBabelTv($unlinkedResource);\\n\\t\\t\\t\\t\\tunset($linkedResources[$contextKey]);\\n\\t\\t\\t\\t\\t$babel->updateBabelTv($linkedResources, $linkedResources);\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\/* create an new resource an add a translation link *\\/\\n\\t\\t\\t\\tif(isset($_POST[\'babel-translate\'])) {\\n\\t\\t\\t\\t\\tif($currentContextKey == $contextKey) {\\n\\t\\t\\t\\t\\t\\t\\/* error: translation should be created in the same context *\\/\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.translation_in_same_context\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\tif(isset($linkedResources[$contextKey])) {\\n\\t\\t\\t\\t\\t\\t\\/* error: there does already exist a translation *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'context\' => $contextKey);\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.translation_already_exists\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t$newResource = $babel->duplicateResource($resource, $contextKey);\\n\\t\\t\\t\\t\\tif($newResource) {\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t$linkedResources[$contextKey] = $newResource->get(\'id\');\\n\\t\\t\\t\\t\\t\\t$babel->updateBabelTv($linkedResources, $linkedResources);\\n\\t\\t\\t\\t\\t} else {\\n\\t\\t\\t\\t\\t\\t\\/* error: translation could not be created *\\/\\n\\t\\t\\t\\t\\t\\t$errorParameter = array(\'context\' => $contextKey);\\n\\t\\t\\t\\t\\t\\tthrow new Exception(\'error.could_not_create_translation\');\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t\\/* redirect to new resource *\\/\\n\\t\\t\\t\\t\\t$url = $modx->getOption(\'manager_url\',null,MODX_MANAGER_URL).\'?a=\'.$actions[\'resource\\/update\'].\'&id=\'.$newResource->get(\'id\');\\n\\t\\t\\t\\t\\t$modx->sendRedirect(rtrim($url,\'\\/\'),\'\',\'\',\'full\');\\n\\t\\t\\t\\t}\\n\\t\\t\\t} catch (Exception $exception) {\\n\\t\\t\\t\\t$errorKey = $exception->getMessage();\\n\\t\\t\\t\\tif($errorKey) {\\n\\t\\t\\t\\t\\tif(!is_array($errorParameter)) {\\n\\t\\t\\t\\t\\t\\t$errorParameter = array();\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t$errorMessage = \'<div id=\\"babel-error\\">\'.$modx->lexicon($errorKey,$errorParameter).\'<\\/div>\';\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\n\\t\\t}\\n\\t\\t\\n\\t\\t\\/* create babel-box with links to translations *\\/\\n\\t\\t$linkedResources = $babel->getLinkedResources($resource->get(\'id\'));\\n\\t\\t$outputLanguageItems = \'\';\\n\\t\\tforeach($contextKeys as $contextKey) {\\n\\t\\t\\t\\/* for each (valid\\/existing) context of the context group a button will be displayed *\\/\\n\\t\\t\\t$context = $modx->getObject(\'modContext\', array(\'key\' => $contextKey));\\n\\t\\t\\tif(!$context) {\\n\\t\\t\\t\\t$modx->log(modX::LOG_LEVEL_ERROR, \'Could not load context: \'.$contextKey);\\n\\t\\t\\t\\tcontinue;\\n\\t\\t\\t}\\n\\t\\t\\t$context->prepare();\\n\\t\\t\\t$cultureKey = $context->getOption(\'cultureKey\',$modx->getOption(\'cultureKey\'));\\n\\t\\t\\t\\/* url to which the form will post it\'s data *\\/\\n\\t\\t\\t$formUrl = \'?a=\'.$actions[\'resource\\/update\'].\'&amp;id=\'.$resource->get(\'id\');\\n\\t\\t\\tif(isset($linkedResources[$contextKey])) {\\n\\t\\t\\t\\t\\/* link to this context has been set *\\/\\n\\t\\t\\t\\tif($linkedResources[$contextKey] == $resource->get(\'id\')) {\\n\\t\\t\\t\\t\\t\\/* don\'t show language layer for current resource *\\/\\n\\t\\t\\t\\t\\t$showLayer = \'\';\\n\\t\\t\\t\\t} else {\\n\\t\\t\\t\\t\\t$showLayer = \'yes\';\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t$showTranslateButton = \'\';\\n\\t\\t\\t\\t$showUnlinkButton = \'yes\';\\n\\t\\t\\t\\t$showSecondRow = \'\';\\n\\t\\t\\t\\t$resourceId = $linkedResources[$contextKey];\\n\\t\\t\\t\\t$resourceUrl = \'?a=\'.$actions[\'resource\\/update\'].\'&amp;id=\'.$resourceId;\\n\\t\\t\\t\\tif($resourceId == $resource->get(\'id\')) {\\n\\t\\t\\t\\t\\t$className = \'selected\';\\n\\t\\t\\t\\t} else {\\n\\t\\t\\t\\t\\t$className = \'\';\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\n\\t\\t\\t} else {\\n\\t\\t\\t\\t\\/* link to this context has not been set yet:\\n\\t\\t\\t\\t * -> show button to create translation *\\/\\n\\t\\t\\t\\t$showLayer = \'yes\';\\n\\t\\t\\t\\t$showTranslateButton = \'yes\';\\n\\t\\t\\t\\t$showUnlinkButton = \'\';\\n\\t\\t\\t\\t$showSecondRow = \'yes\';\\n\\t\\t\\t\\t$resourceId = \'\';\\n\\t\\t\\t\\t$resourceUrl = \'#\';\\n\\t\\t\\t\\t$className = \'notset\';\\n\\t\\t\\t}\\n\\t\\t\\t$placeholders = array(\\n\\t\\t\\t\\t\'formUrl\' => $formUrl,\\n\\t\\t\\t\\t\'contextKey\' => $contextKey,\\n\\t\\t\\t\\t\'cultureKey\' => $cultureKey,\\n\\t\\t\\t\\t\'resourceId\' => $resourceId,\\n\\t\\t\\t\\t\'resourceUrl\' => $resourceUrl,\\n\\t\\t\\t\\t\'className\' => $className,\\n\\t\\t\\t\\t\'showLayer\' => $showLayer,\\n\\t\\t\\t\\t\'showTranslateButton\' => $showTranslateButton,\\n\\t\\t\\t\\t\'showUnlinkButton\' => $showUnlinkButton,\\n\\t\\t\\t\\t\'showSecondRow\' => $showSecondRow,\\n\\t\\t\\t);\\n\\t\\t\\t$outputLanguageItems .= $babel->getChunk(\'mgr\\/babelBoxItem\', $placeholders);\\n\\t\\t}\\n\\t\\t\\n\\t\\t$output .= \'<div id=\\"babel-box\\">\'.$errorMessage.$outputLanguageItems.\'<\\/div>\';\\n\\t\\t$modx->event->output($output);\\n\\t\\t\\n\\t\\t\\/* include CSS *\\/\\n\\t\\t$modx->regClientCSS($babel->config[\'cssUrl\'].\'babel.css?v=6\');\\n\\t\\t$modx->regClientStartupScript($babel->config[\'jsUrl\'].\'babel.js?v=3\');\\n\\t\\tbreak;\\n\\t\\n\\tcase \'OnDocFormSave\':\\n\\t\\t$resource =& $modx->event->params[\'resource\'];\\n\\t\\tif(!$resource) {\\n\\t\\t\\t$modx->log(modX::LOG_LEVEL_ERROR, \'No resource provided for OnDocFormSave event\');\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t\\tif($modx->event->params[\'mode\'] == modSystemEvent::MODE_NEW) {\\n\\t\\t\\t\\/* no TV synchronization for new resources, just init Babel TV *\\/\\n\\t\\t\\t$babel->initBabelTv($resource);\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t\\t$babel->sychronizeTvs($resource->get(\'id\'));\\n\\t\\tbreak;\\n\\t\\t\\n\\tcase \'OnEmptyTrash\':\\n\\t\\t\\/* remove translation links to non-existing resources *\\/\\n\\t\\t$deletedResourceIds =& $modx->event->params[\'ids\'];\\n\\t\\tif(is_array($deletedResourceIds)) {\\n\\t\\t\\tforeach ($deletedResourceIds as $deletedResourceId) {\\n\\t\\t\\t\\t$babel->removeLanguageLinksToResource($deletedResourceId);\\n\\t\\t\\t}\\n\\t\\t}\\t\\t\\n\\t\\tbreak;\\n\\t\\t\\n\\tcase \'OnContextRemove\':\\n\\t\\t\\/* remove translation links to non-existing contexts *\\/\\n\\t\\t$context =& $modx->event->params[\'context\'];\\n\\t\\tif($context) {\\n\\t\\t\\t$babel->removeLanguageLinksToContext($context->get(\'key\'));\\n\\t\\t}\\n\\t\\tbreak;\\n\\t\\n\\tcase \'OnResourceDuplicate\':\\n\\t\\t\\/* init Babel TV of duplicated resources *\\/\\n\\t\\t$resource =& $modx->event->params[\'newResource\'];\\n\\t\\t$babel->initBabelTv($resource);\\n\\t\\tbreak;\\n}\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":""}',
+);

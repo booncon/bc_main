@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3dec699352b6efb17a5287f8736ec842',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'db1488352e0627fabf8ef16ab159f1dc',
+  'native_key' => 'OnBeforeDocFormDelete',
+  'object' => '{"name":"OnBeforeDocFormDelete","service":1,"groupname":"Resources"}',
+);

@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 
+  array (
+    0 => 'namespace',
+    1 => 'controller',
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e94ef8038f3bed5870b076b04a7ab54d',
+  'package' => 'modx',
+  'class' => 'modAction',
+  'signature' => '5c714e863f1f511680f1e4add7acf9ec',
+  'native_key' => 83,
+  'object' => '{"id":83,"namespace":"core","controller":"security\\/access\\/policy\\/template\\/update","haslayout":1,"lang_topics":"user,policy","assets":"","help_url":"PolicyTemplates"}',
+);

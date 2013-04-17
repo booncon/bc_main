@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 
+  array (
+    0 => 'namespace',
+    1 => 'controller',
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b2e850efd3e035f74bfb703878bb8ac4',
+  'package' => 'modx',
+  'class' => 'modAction',
+  'signature' => '7f8dab4889ddcd82a487d5a2ab1d081a',
+  'native_key' => 101,
+  'object' => '{"id":101,"namespace":"core","controller":"system\\/dashboards\\/update","haslayout":1,"lang_topics":"dashboards,user","assets":"","help_url":"Dashboards"}',
+);

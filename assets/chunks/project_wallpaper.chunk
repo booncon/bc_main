@@ -1,0 +1,5 @@
+<article>
+  <div class="wallpaper [[+description:notempty=`with_caption`]]" style="background-image: url([[++base_url]][[+content]]);"></div>
+  [[+description:notempty=`<div class="caption">[[+description]]</div>`]]
+  <div class="clear"></div>
+</article> 

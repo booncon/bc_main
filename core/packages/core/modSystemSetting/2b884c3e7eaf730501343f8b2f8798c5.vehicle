@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '51913008b04f011113cfec3e52ba9275',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2b884c3e7eaf730501343f8b2f8798c5',
+  'native_key' => 'upload_images',
+  'object' => '{"key":"upload_images","value":"jpg,jpeg,png,gif,psd,ico,bmp","xtype":"textfield","namespace":"core","area":"file","editedon":null}',
+);

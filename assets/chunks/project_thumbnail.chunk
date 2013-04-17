@@ -1,0 +1,3 @@
+<article class="fizzy [[!categoryMachineName? &val=`[[+tv.category]]` &prefix=` `]]">
+  <a class="showcase_block" title="[[+pagetitle]]" href="[[~[[+id]]]]" data-url="[[~[[+id]]]]"><img src="[[+tv.thumbnail]]" alt="[[+pagetitle]]" /><div class="darker"></div><div class="caption">[[+pagetitle]]</div></a>  
+</article>

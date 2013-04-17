@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9244c6b24b3dfa3355f3921d68d45c4f',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'd7b55b88c2f673637ba90014bb14eaf4',
+  'native_key' => 'OnBeforeTVFormDelete',
+  'object' => '{"name":"OnBeforeTVFormDelete","service":1,"groupname":"Template Variables"}',
+);
