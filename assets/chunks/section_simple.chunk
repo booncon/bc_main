@@ -1,0 +1,10 @@
+<div class="main-container content_section">
+  <div class="main_full">
+    <article>
+      <h1 id="[[+tv.machinename]]" class="section_title">[[+pagetitle]]</h1>
+      <section>
+        [[+content]]
+      </section>
+    </article>
+  </div>
+</div>

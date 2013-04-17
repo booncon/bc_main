@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9db10dcf4995e8d5772f5c4f5303ff20',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'bdf53ec29ced14a0807d83ff1b5b6013',
+  'native_key' => 'cache_lexicon_topics',
+  'object' => '{"key":"cache_lexicon_topics","value":"1","xtype":"combo-boolean","namespace":"core","area":"caching","editedon":null}',
+);

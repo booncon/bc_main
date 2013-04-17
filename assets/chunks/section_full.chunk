@@ -1,6 +1,0 @@
-<div class="section_block" id="[[+tv.machinename]]">   
-  <div class="span_24 clr">
-    <h3 class="title medium [[+tv.classTitle]]">[[+pagetitle]]</h3>
-    [[+content]]
-  </div>
-</div>

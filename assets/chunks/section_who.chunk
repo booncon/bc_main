@@ -1,0 +1,18 @@
+<div class="main-container content_section">
+  <div class="main left_column">
+    <article>
+      <h1 id="[[+tv.machinename]]" class="section_title">[[+pagetitle]]</h1>
+      <section>
+        [[+content]]
+      </section>
+    </article>
+  </div>
+  <aside class="right_column">
+    <p class="normal_text">
+    Wir sind ein junges internationales Team und wollen neue Welten entdecken.<br/> Bist auch du bereit für ein Abenteuer, dann bewirb dich bei uns:          
+    </p>
+    <ul class="link_buttons">
+      <li class="jobs"><a href="http://jobs.booncon.com" target="_blank">booncon jobs</a></li>
+    </ul>
+  </aside>
+</div>

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '035a9741bacb080f30b7b639bc0ed9f5',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '74dd7f773715c30e37f314e9b1543f32',
+  'native_key' => 'OnResourceTVFormPrerender',
+  'object' => '{"name":"OnResourceTVFormPrerender","service":1,"groupname":"Resources"}',
+);

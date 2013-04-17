@@ -9,7 +9,7 @@
 # to your rule: RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
 
 RewriteEngine On
-RewriteBase /bc_main/
+RewriteBase /
 
 
 
@@ -35,34 +35,9 @@ RewriteBase /bc_main/
 
 
 # The Friendly URLs part
-
-# language is german
-RewriteCond %{HTTP:Accept-Language} ^de [NC]
-RewriteRule ^$ de/ [L,R=301]
-# language is italian
-RewriteCond %{HTTP:Accept-Language} ^it [NC]
-RewriteRule ^$ it/ [L,R=301]
-# language is finnish
-RewriteCond %{HTTP:Accept-Language} ^fi [NC]
-RewriteRule ^$ fi/ [L,R=301]
-# default is English
-RewriteRule ^$ en/ [L,R=301]
-
-# redirect all requests from /__/favicon.ico /favicon.ico
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(it|en|de|fi)/favicon.ico$ favicon.ico [L,QSA]
-
-# redirect all requests from /__/assets* to /assets*
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(it|en|de|fi)/assets(.*)$ assets$2 [L,QSA]
-
-# redirect all other requests from /__/*
-# to index.php and set the cultureKey parameter
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(it|en|de|fi)?/?(.*)$ index.php?cultureKey=$1&q=$2 [L,QSA]
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 
 
 

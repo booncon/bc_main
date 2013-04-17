@@ -1,122 +1,193 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[[++cultureKey]]"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="[[++cultureKey]]"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="[[++cultureKey]]"> <![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[[++cultureKey]]"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="[[++cultureKey]]"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="[[++cultureKey]]"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="[[++cultureKey]]"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>[[++site_name]]</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <base href="[[!++site_url]]" />  
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/ong3eiq.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <div id="topbar">
+      <ul class="lang_menu">
+        [[BabelLinks? &tpl=`languageItem`]]
+      </ul>
+    </div>
+    <div class="header-container">
+      <div class="main-container">
+        <header class="clearfix">
+          <h1 class="title visuallyhidden">booncon</h1>                
+          <a href="#top"><img src="assets/gfx/logo_bc-main.svg" alt="Logo booncon" class="main_logo" /></a>
+          <nav class="main_menu">
+            <ul>
+              [[Wayfinder? &startId=`[[*id]]` &rowTpl=`mainMenuItem`]]
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="header-container floating">
+      <div class="main-container">
+        <header class="clearfix">             
+          <a href="#top"><img src="assets/gfx/logo_bc-main-invert.svg" alt="Logo booncon" class="main_logo" /></a>
+          <nav class="main_menu">
+            <ul>
+              [[Wayfinder? &startId=`[[*id]]` &rowTpl=`mainMenuItem`]]
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
 
-<head>
-  <meta charset="utf-8">
-  <title>[[++site_name]]</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <base href="[[!++site_url]]" />  
-  <link rel="stylesheet" href="[[++assets_url]]css/style.css?v=1">
-  <script src="[[++assets_url]]js/libs/modernizr-2.5.3.min.js"></script>
-  <script type="text/javascript" src="//use.typekit.net/efr2ypb.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <style>
-    .fizzy {
-      max-width: 23%;
-      float: left;
-    }
-  </style>
-</head>
-<body>
-  <div id="sticky_menu" class="sticky_menu">
-    <div class="container">
-      <div class="span_24">
-        <div class="col span_10"><a href="#top" class="sticky_top_link" id="logo-top-link"><img class="sticky_header_logo" src="[[++assets_url]]gfx/logo_bc-pixels-invert.svg" alt="booncon pixels" /></a></div>
-        <nav class="col span_14 main_nav">
-          <ul class="main_menu sticky">
-            [[Wayfinder? &startId=`[[*id]]` &rowTpl=`mainMenuItem`]]
-          </ul>
-       </nav>
+    <div class="parallax_wrapper welcome">
+      <h2 class="main_slogan">booncon is Rocket Science</h2>
+      <div class="header_pic" style="background-image: url('assets/img/slider_pics/books.jpg')"></div>
+    </div>
+
+    [[!getResources:default=``? &parents=`[[*id]]` &resources=`-[[BabelTranslation? &resourceId=`69` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tplCondition=`sectionType` &conditionalTpls=`{"":"sectionSimple", "simple":"sectionSimple", "who":"sectionWho"}` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20` ]]
+   
+    <div class="main-container content_section">
+      <div class="main left_column">
+        <article>
+          <h1 id="who" class="section_title">Who we are</h1>
+          <section>
+            
+          </section>
+        </article>        
       </div>
-    </div>  
-  </div>
-  <input type="hidden" id="page_title" value="[[++site_name]]" />
-  <div id="topbar">
-    <ul class="lang_menu">
-      [[BabelLinks? &tpl=`languageItem`]]
-    </ul>
-  </div>
-  <div class="container">
-    <header class="row span_24">
-        <div class="col span_10 logo_wrap"><h1 class="visuallyhidden">[[++site_name]]</h1><img class="header_logo" src="[[++assets_url]]gfx/logo_bc-pixels.svg" alt="booncon pixels" /></div>
-        <nav id="global_nav" class="col span_14 main_nav">
-        <ul class="main_menu">
-          [[Wayfinder? &startId=`[[*id]]` &rowTpl=`mainMenuItem`]]
+      <aside class="right_column">
+        <p class="normal_text">
+        Wir sind ein junges internationales Team und wollen neue Welten entdecken.<br/> Bist auch du bereit für ein Abenteuer, dann bewirb dich bei uns:          
+        </p>
+        <ul class="link_buttons">
+          <li class="jobs"><a href="http://jobs.booncon.com" target="_blank">booncon jobs</a></li>
         </ul>
-       </nav>
-    </header>
-    <div class="smooth header_slogan">[[*slogan]]</div>
-  </div>  
-  <section class="explode" id="project_wrapper"></section> 
- <div id="content" class="container">
-    [[!getResources:default=``? &parents=`[[*id]]` &resources=`-[[BabelTranslation? &resourceId=`69` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tpl=`sectionFull` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20` &outputSeparator=`<hr class="section_divider color_bc" />` ]]
-  </div>
-  <div class="only_mobile">* Some content is missing on this mobile version</div>
-  <div class="map">
-    <div class="contact_wrap">
-      <div class="container">
-        <section class="span_24 clr">
-          <article class="contact">         
-            <article class="text_right">
-              
-          [[!getResources:default=``? &parents=`-1` &resources=`[[BabelTranslation? &resourceId=`69` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tpl=`sectionFull` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20`]] 
-              <br />
-              <a href="mailto:pixels@booncon.com" class="contact_link">pixels@booncon.com</a>
-              <div class="contact_phone">+358 45 8980609</div>
-              
-              <a href="http://jobs.booncon.com" target="_blank" class="job_link"><span class="ss-icon">map</span> Jobs</a>
-              <br />
-              <br />                        
-              <div class="contact_social text_right clear">
-                <ul>
-                  <li class="contact_icon"><a href="https://www.facebook.com/booncon"><img src="assets/img/icon_facebook.svg" alt="Icon facebook" target="_blank" />Facebook</a></li>
-                  <li class="contact_icon"><a href="https://twitter.com/booncon"><img src="assets/img/icon_twitter.svg" alt="Icon facebook" target="_blank" />Twitter</a></li>
-                  <li class="contact_icon"><a href="http://www.linkedin.com/company/booncon"><img src="assets/img/icon_linked.svg" alt="Icon facebook" target="_blank" />LinkedIn</a></li>
-                </ul>
-              </div>
-              <div class="clear"></div>
-              <br />
-              <div class="contact_small text_right">
-                booncon oy<br />
-                Iso Roobertinkatu 44 LH 1<br />
-                Helsinki 00120, FIN<br />
-                <br />
-                VAT: FI24323170<br />
-               
-              </div>      
-            </article> 
-          </article>
-          <article class="col span_24 footer_text">
-        [[*footer]]
-      </article> 
-        </section>
+      </aside>
+    </div>
+    <div class="main-container content_section story_container">      
+      <div class="main left_column">
+        <h1 id="when" class="section_title">How it started</h1>    
+        <article class="story_text">       
+          <section class="normal_text">             
+              <h2>Die Gefährten</h2>
+              <p>Alles begann im Sommer 2010, als wir, Sven, Tobias und Lukas, quer über Europa verteilt arbeiteten.</p>
+              <p>In uns herrschte der Wunsch nach etwas Neuem. Wir waren auf der Suche nach einem Arbeitsumfeld, das über die Arbeit hinausgeht.  </p>
+              <p>Wir sind Kinder des Internets: Überall und nirgendwo zuhause, wollten wir gemeinsam etwas auf die Beine stellen.</p>
+              <p>Von der nordischen Kultur und ihrer Schlichtheit schon immer fasziniert, zog es uns nach Skandinavien.</br>
+  Helsinki befand sich so wie wir im Aufbruch und war deshalb der ideale Ort für unser Vorhaben.</p>
+              <p>Helsinkis Start-up-freundliches Umfeld ermöglichte uns eine Partnerschaft mit der Aalto Design Factory, in der wir im Herbst 2011 unsere Zelte aufschlugen.</p>
+              <p>booncon wurde Wirklichkeit und die Arbeit begann.</p>  
+            </section>
+            <section class="normal_text">
+              <h2>Die zweite Stufe</h2>
+              <p>Die Zusammenarbeit mit finnischen und internationalen Unternehmen und der Austausch mit hochmotivierten Studenten beflügelte uns.</p>
+              <p>Steigende Aufträge und ein wachsendes Team zeigten, dass unsere zentrale Idee eines freundschaftlichen Arbeitsumfelds aufging.
+  Voller Tatendrang bezogen wir im Herbst 2012 unser neues Büro im Herzen Helsinkis.</p>
+              <p>Um noch fokussierter an den verschiedenen Projekten arbeiten zu können, haben wir booncon in zwei eigenständige Sparten aufgeteilt: booncon PIXELS und booncon ROCKETS.</p>
+            </section>          
+        </article>        
       </div>
-    </div>  
-  </div>  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="[[++assets_url]]js/libs/jquery-ui-1.8.23.custom.min.js"><\/script>');
-    window.jQuery || document.write('<script src="[[++assets_url]]js/libs/jquery-1.8.2.min.js"><\/script>');
-    $(document).ready(function () {
-      assets_url = '[[++assets_url]]';
-      initJQ();
-    });
-  </script>
-  <script src="[[++assets_url]]js/plugins.js"></script>
-  <script src="[[++assets_url]]js/libs/jquery.wmuslider.mod.js"></script>
-  <script src="[[++assets_url]]js/script.js?v=1.2"></script>
-  <script>    
-    var _gaq=[ ['_setAccount','UA-38942381-1'],['_trackPageview'] ];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-  <!-- Thanks for the great device vectors: Illustration Copyright by Emanuele Michelucci / addSoul design studio / www.vectorized.it /  -->
-</body>
+      <aside class="right_column time_wrap">
+        <div id="timeline"></div>
+      </aside>    
+    </div>
+    <div class="main-container content_section" id="Partners">   
+      <div class="main_full">
+        <h1 id="partners" class="section_title">Partners</h1>
+        <ul class="no-bullets">
+          <li class="partner_logo"><a href="http://www.designdistrict.fi/" target="_blank"><img src="assets/img/logo_design-district.svg" alt="Logo Helsinki Design District"></a></li>
+          <li class="partner_logo"><a href="http://designfactory.aalto.fi/" target="_blank"><img src="assets/img/logo-df.svg" alt="Logo Aalto Design Factory"></a></li>
+        </ul>
+      </div>
+    </div>
+    <footer id="contact" class="map">
+      <div class="contact_wrap">
+        <div class="main-container">
+            <article class="contact">     
+              <article class="text_right">              
+                <div class="section_block" id="contact">   
+                  <div class="span_24 clr">
+                    <h3 class="contact_title text_right">Say hello.</h3>
+                      <div class="text_right">
+                        We would be happy to get to know you<br> and create something beautiful together.
+                      </div>
+                  </div>
+                </div>
+                <br>
+                <a href="mailto:pixels@booncon.com" class="contact_link">hi@booncon.com</a>
+                <div class="contact_phone">+358 45 8980609</div>                 
+                <div class="contact_social">
+                  <ul class="no-bullets">
+                    <li class="contact_icon"><a href="https://www.facebook.com/booncon"><img src="assets/img/icon_facebook.svg" alt="Icon facebook" target="_blank">Facebook</a></li>
+                    <li class="contact_icon"><a href="https://twitter.com/booncon"><img src="assets/img/icon_twitter.svg" alt="Icon facebook" target="_blank">Twitter</a></li>
+                    <li class="contact_icon"><a href="http://www.linkedin.com/company/booncon"><img src="assets/img/icon_linked.svg" alt="Icon facebook" target="_blank">LinkedIn</a></li>
+                  </ul>
+                </div>
+                <div class="contact_small">
+                  booncon oy<br>
+                  Iso Roobertinkatu 44 LH 1<br>
+                  Helsinki 00120, FIN<br>
+                  <br>
+                  VAT: FI24323170<br>                 
+                </div>      
+              </article> 
+            </article>
+            <div class="clearfix"></div>
+            <article class="footer_text">
+              <a href="http://booncon.com" target="_blank"><span class="ss-icon footer_symbol">genius</span> from Helsinki</a>
+            </article>
+        </div>
+      </div>
+    </footer>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      /*
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      */
+
+        var data = [
+        { head: 'Jun 2010', body: 'Idea booncon', img: 'assets/img/time_idea.jpg' },
+        { head: 'Sep 2011', body: 'Foundation + ADF', img: 'assets/img/time_office_df.jpg' },
+        { head: 'Sep 2012', body: 'Office Helsinki', img: 'assets/img/time_office_hki.jpg' },
+        { head: 'Jan 2013', body: 'New companions', img: 'assets/img/time_new_companions.jpg' },
+        { head: 'Mar 2013', body: 'Pixels & Rockets', img: 'assets/img/time_pixels_rockets.jpg' }
+      ];
+
+      var slider_pics = new Array('books', 'console', 'keyboard', 'magnets', 'pi', 'plant', 'whiteboard');
+
+      $('.header_pic').css('background-image', 'url(assets/img/slider_pics/' + slider_pics[Math.round(Math.random()*(slider_pics.length - 1))] + '.jpg)').fadeIn(100);
+
+      var time_wrap_width = $('#timeline').width();
+      var time_wrap_height = $('.story_text').height();
+
+      var timeline = new d3xTimeline(data, {
+        container: '#timeline',
+        w: time_wrap_width,
+        h: time_wrap_height * 0.94,
+        pad: time_wrap_height/12,
+        r: time_wrap_width/12,
+        scale_factor: 1.56,
+        r_stopper: 3,
+        line_length: time_wrap_width/2.72,
+        box_pos: time_wrap_width/2.05,
+        duration_in: 200,
+        duration_out: 500
+      });
+    </script>
+  </body>
 </html>

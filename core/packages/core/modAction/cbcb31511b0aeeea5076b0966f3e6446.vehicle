@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 
+  array (
+    0 => 'namespace',
+    1 => 'controller',
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5500faac0a2d53c3df79e390f9f723db',
+  'package' => 'modx',
+  'class' => 'modAction',
+  'signature' => 'cbcb31511b0aeeea5076b0966f3e6446',
+  'native_key' => 22,
+  'object' => '{"id":22,"namespace":"core","controller":"element\\/plugin\\/update","haslayout":1,"lang_topics":"plugin,category,system_events,propertyset,element","assets":"","help_url":"Plugins"}',
+);

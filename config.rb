@@ -1,11 +1,13 @@
 # Require any additional compass plugins here.
+require 'compass-h5bp'
+require 'zen-grids'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "assets/css"
 sass_dir = "assets/css/scss"
-images_dir = "img"
-javascripts_dir = "js"
+images_dir = "assets/img"
+javascripts_dir = "assets/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -21,4 +23,4 @@ javascripts_dir = "js"
 # project again passing --syntax sass, or you can uncomment this:
 # preferred_syntax = :sass
 # and then run:
-# sass-convert -R --from scss --to sass css/sass scss && rm -rf sass && mv scss sass
+# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass

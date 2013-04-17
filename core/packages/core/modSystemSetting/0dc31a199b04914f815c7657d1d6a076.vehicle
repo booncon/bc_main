@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f2f8436c1c896ac150dc87d4f279b69d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0dc31a199b04914f815c7657d1d6a076',
+  'native_key' => 'error_page',
+  'object' => '{"key":"error_page","value":"1","xtype":"textfield","namespace":"core","area":"site","editedon":null}',
+);
