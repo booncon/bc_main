@@ -2,6 +2,7 @@
 *.zip
 *.tar.gz
 *.tar
+!core.transport.zip
 
 # OS generated files #
 ######################
@@ -18,9 +19,8 @@ Thumbs.db
 # project specific directories #
 ################################
 core/cache
-core/config
+core/config/*
 !core/cache/.gitignore
 !core/cache/components/.gitignore
-core/config/*
 !core/config/config.inc.php.sample
 .htaccess
