@@ -41,7 +41,7 @@
 
     <div class="parallax_wrapper welcome">
       <h2 class="main_slogan">[[*slogan]]</h2>
-      <div class="header_pic" style="background-image: url('assets/img/slider_pics/books.jpg')"></div>
+      <div class="header_pic" style="background-image: url('[[headerImage]]')"></div>
     </div>
 
     <div class="main-container content_section">
@@ -165,10 +165,6 @@
       var data = [
         [[!getResources:default=``? &parents=`[[BabelTranslation? &resourceId=`164` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tpl=`history_event` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &outputSeparator=`, ` &limit=`20`]]
       ];
-
-      var slider_pics = new Array('books', 'console', 'keyboard', 'magnets', 'pi', 'plant', 'whiteboard');
-
-      $('.header_pic').css('background-image', 'url(assets/img/slider_pics/' + slider_pics[Math.round(Math.random()*(slider_pics.length - 1))] + '.jpg)').fadeIn(100);
 
       var time_wrap_width = $('#timeline').width();
       var time_wrap_height = $('.story_text').height();
