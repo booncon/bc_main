@@ -836,12 +836,11 @@ h2 {
   width: 100%;
   height: 100%;
   background-attachment: fixed;
-  display: none;
   position: absolute;
   top: 0;
 }
 
-/* line 254, scss/main.scss */
+/* line 253, scss/main.scss */
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
@@ -858,18 +857,18 @@ h2 {
   z-index: 5;
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 254, scss/main.scss */
+  /* line 253, scss/main.scss */
   .main_slogan {
     font-size: 2.4em;
   }
 }
 
-/* line 273, scss/main.scss */
+/* line 272, scss/main.scss */
 .link_buttons {
   padding: 0;
   overflow: hidden;
 }
-/* line 276, scss/main.scss */
+/* line 275, scss/main.scss */
 .link_buttons li {
   display: inline-block;
   height: 8em;
@@ -877,7 +876,7 @@ h2 {
   padding: 0;
   float: left;
 }
-/* line 282, scss/main.scss */
+/* line 281, scss/main.scss */
 .link_buttons li a {
   text-indent: -9999px;
   text-align: center;
@@ -893,38 +892,38 @@ h2 {
   -o-background-size: 150px;
   background-size: 150px;
 }
-/* line 293, scss/main.scss */
+/* line 292, scss/main.scss */
 .link_buttons li a:hover {
   opacity: 0.7;
 }
-/* line 297, scss/main.scss */
+/* line 296, scss/main.scss */
 .link_buttons li.pixels {
   width: 50%;
 }
-/* line 299, scss/main.scss */
+/* line 298, scss/main.scss */
 .link_buttons li.pixels a {
   background-color: #e24b70;
   background-image: url(../gfx/logo_bc-pixels_invert.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-/* line 306, scss/main.scss */
+/* line 305, scss/main.scss */
 .link_buttons li.rockets {
   width: 50%;
 }
-/* line 308, scss/main.scss */
+/* line 307, scss/main.scss */
 .link_buttons li.rockets a {
   background-color: #22aeeb;
   background-image: url(../gfx/logo_bc-rockets_invert.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-/* line 315, scss/main.scss */
+/* line 314, scss/main.scss */
 .link_buttons li.jobs {
   width: 100%;
   height: 6em;
 }
-/* line 318, scss/main.scss */
+/* line 317, scss/main.scss */
 .link_buttons li.jobs a {
   background-color: #3b454f;
   background-image: url(../gfx/logo_bc-jobs_invert.png);
@@ -932,7 +931,7 @@ h2 {
   background-repeat: no-repeat;
 }
 
-/* line 328, scss/main.scss */
+/* line 327, scss/main.scss */
 .panel {
   float: left;
   width: 25%;
@@ -947,7 +946,7 @@ h2 {
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 337, scss/main.scss */
+/* line 336, scss/main.scss */
 .panel .side {
   float: none;
   position: absolute;
@@ -980,11 +979,11 @@ h2 {
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-/* line 350, scss/main.scss */
+/* line 349, scss/main.scss */
 .panel .side.front {
   z-index: 900;
 }
-/* line 353, scss/main.scss */
+/* line 352, scss/main.scss */
 .panel .side.back {
   z-index: 800;
   -webkit-transform: rotateY(-180deg);
@@ -993,28 +992,28 @@ h2 {
   -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
-/* line 356, scss/main.scss */
+/* line 355, scss/main.scss */
 .panel .side.back .pad {
   position: absolute;
   bottom: 4px;
   background-color: #fff;
   padding: 4px 8px 4px 0;
 }
-/* line 361, scss/main.scss */
+/* line 360, scss/main.scss */
 .panel .side.back .pad h2 {
   padding: 0 0 2px;
   font-size: 14px;
   line-height: 14px;
   margin: 0;
 }
-/* line 367, scss/main.scss */
+/* line 366, scss/main.scss */
 .panel .side.back .pad h3 {
   padding: 0;
   font-size: 12px;
   line-height: 12px;
   margin: 0;
 }
-/* line 377, scss/main.scss */
+/* line 376, scss/main.scss */
 .panel.flip .front {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
@@ -1023,7 +1022,7 @@ h2 {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 381, scss/main.scss */
+/* line 380, scss/main.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -1033,22 +1032,22 @@ h2 {
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 389, scss/main.scss */
+/* line 388, scss/main.scss */
 .partner_logo {
   float: left;
   margin: 0 3em 0 0;
   height: 8em;
 }
-/* line 394, scss/main.scss */
+/* line 393, scss/main.scss */
 .partner_logo a:hover {
   opacity: 0.7;
 }
-/* line 398, scss/main.scss */
+/* line 397, scss/main.scss */
 .partner_logo img {
   height: 100%;
 }
 
-/* line 403, scss/main.scss */
+/* line 402, scss/main.scss */
 .map {
   background-image: url(../gfx/Helsinki.png);
   background-position: 50% 50%;
@@ -1057,12 +1056,12 @@ h2 {
   border-top: 1px solid #888;
   margin-top: 2em;
 }
-/* line 410, scss/main.scss */
+/* line 409, scss/main.scss */
 .map .contact_wrap {
   padding: 40px 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* line 414, scss/main.scss */
+/* line 413, scss/main.scss */
 .map .contact {
   overflow: hidden;
   font-size: 2em;
@@ -1074,13 +1073,13 @@ h2 {
   font-weight: 600;
   line-height: 1.2;
 }
-/* line 425, scss/main.scss */
+/* line 424, scss/main.scss */
 .map .contact_title {
   font-size: 1.8em;
   margin: 0 0 0.4em;
   font-weight: 800;
 }
-/* line 430, scss/main.scss */
+/* line 429, scss/main.scss */
 .map .contact_link {
   color: #d9dee3;
   text-decoration: none;
@@ -1091,7 +1090,7 @@ h2 {
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-/* line 436, scss/main.scss */
+/* line 435, scss/main.scss */
 .map .contact_link:hover {
   opacity: 0.7;
   -webkit-transition: all 200ms ease-in-out;
@@ -1099,13 +1098,13 @@ h2 {
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* line 441, scss/main.scss */
+/* line 440, scss/main.scss */
 .map .contact_phone {
   font-weight: 800;
   font-size: 1.1em;
   text-align: right;
 }
-/* line 446, scss/main.scss */
+/* line 445, scss/main.scss */
 .map .contact_small {
   font-size: 0.6em;
   float: right;
@@ -1113,63 +1112,63 @@ h2 {
   text-align: right;
   overflow: hidden;
 }
-/* line 453, scss/main.scss */
+/* line 452, scss/main.scss */
 .map .contact_social {
   width: 100%;
   font-size: 0.6em;
   float: right;
   margin-top: 1em;
 }
-/* line 454, scss/main.scss */
+/* line 453, scss/main.scss */
 .map .contact_social ul {
   float: right;
 }
-/* line 461, scss/main.scss */
+/* line 460, scss/main.scss */
 .map .contact_social .contact_icon {
   vertical-align: middle;
   float: left;
   margin: 0 0 0 1em;
 }
-/* line 465, scss/main.scss */
+/* line 464, scss/main.scss */
 .map .contact_social .contact_icon a {
   color: #fff;
   text-decoration: none;
   font-size: 0.9em;
 }
-/* line 469, scss/main.scss */
+/* line 468, scss/main.scss */
 .map .contact_social .contact_icon a img {
   vertical-align: middle;
   height: 2.2em;
   margin: 0 0.4em 0 0;
 }
-/* line 474, scss/main.scss */
+/* line 473, scss/main.scss */
 .map .contact_social .contact_icon a:hover {
   opacity: 0.7;
 }
-/* line 480, scss/main.scss */
+/* line 479, scss/main.scss */
 .map .footer_text {
   width: 100%;
   text-align: center;
 }
-/* line 483, scss/main.scss */
+/* line 482, scss/main.scss */
 .map .footer_text a {
   color: #aaa;
   text-decoration: none;
 }
-/* line 488, scss/main.scss */
+/* line 487, scss/main.scss */
 .map .footer_text .footer_symbol {
   font-size: 120%;
   color: #d9dee3;
   vertical-align: middle;
 }
 
-/* line 497, scss/main.scss */
+/* line 496, scss/main.scss */
 .no-bullets {
   list-style: none;
   padding: 0;
 }
 
-/* line 502, scss/main.scss */
+/* line 501, scss/main.scss */
 .ss-icon {
   font-family: "SSSymbolicons";
   font-style: normal;
@@ -1186,41 +1185,41 @@ h2 {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 508, scss/main.scss */
+/* line 507, scss/main.scss */
 svg {
   width: 100%;
   height: 96%;
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 508, scss/main.scss */
+  /* line 507, scss/main.scss */
   svg {
     font-size: 0.9em;
   }
 }
 
-/* line 516, scss/main.scss */
+/* line 515, scss/main.scss */
 line {
   stroke-width: 2px;
   stroke: #9fabb7;
 }
 
-/* line 521, scss/main.scss */
+/* line 520, scss/main.scss */
 g.left text {
   text-anchor: start;
 }
 
-/* line 524, scss/main.scss */
+/* line 523, scss/main.scss */
 g.right text {
   text-anchor: end;
 }
 
-/* line 529, scss/main.scss */
+/* line 528, scss/main.scss */
 text {
   font-family: "ff-meta-web-pro", sans-serif;
   font-size: 0.9em;
 }
 
-/* line 534, scss/main.scss */
+/* line 533, scss/main.scss */
 .head {
   font-weight: bold;
   text-transform: uppercase;
@@ -1228,23 +1227,23 @@ text {
   font-size: 1.1em;
 }
 
-/* line 541, scss/main.scss */
+/* line 540, scss/main.scss */
 circle.marker {
   fill: #9fabb7;
 }
 
-/* line 546, scss/main.scss */
+/* line 545, scss/main.scss */
 path.arrow {
   fill: #9fabb7;
 }
 
-/* line 550, scss/main.scss */
+/* line 549, scss/main.scss */
 .story_container {
   height: 100%;
   position: relative;
 }
 
-/* line 555, scss/main.scss */
+/* line 554, scss/main.scss */
 .time_wrap {
   position: absolute;
   height: 100%;
