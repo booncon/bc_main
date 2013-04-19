@@ -77,7 +77,7 @@
         <article>
           <h1 id="who" class="section_title">[[*title_who]]</h1>
           <section>
-            [[!getResources:default=``? &parents=`[[BabelTranslation? &resourceId=`155` &contextKey=`[[context]]`]]` &sortby=`menuindex` &sortdir=`ASC` &tpl=`companion` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20`]]
+            [[!getResources:default=``? &parents=`155` &sortby=`menuindex` &sortdir=`ASC` &tpl=`companion` &includeContent=`1` &includeTVs=`1` &processTVs=`1` &limit=`20`]]
           </section>
         </article>        
       </div>
