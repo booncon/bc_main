@@ -1,6 +1,6 @@
 @import "zen";
 
-$zen-column-count: 7;
+$zen-column-count: 12;
 $zen-gutter-width: 2em;
 
 $legacy-support-for-ie7: false;
@@ -13,34 +13,76 @@ $zen-auto-include-item-base: false;
   max-width: 1420px;
   margin: 0 auto;
   width: 94%;
+  @include tablet-only {
+    width: 98%;
+  }
+  @include mobile-only {
+    width: 98%;
+  }  
 }
 
 .content_section {
   margin-top: 4em;
 }
 
+.sub_container {
+  @include zen-clear();
+}
+
+.half_left {
+  @include zen-grid-item-base();
+  @include zen-grid-item(6, 1);
+  @include mobile-only {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }  
+}
+.half_right {
+  @include zen-grid-item-base();
+  @include zen-grid-item(6, 7); 
+  @include mobile-only {
+    @include zen-clear();
+    @include zen-grid-item(12, 1);
+  }
+}
 
 .main {
-  @include zen-grid-item-base();  
-  &.right_column {
-    @include zen-grid-item(5, 3);
-  }
+  @include zen-grid-item-base();
   &.left_column {
-    @include zen-grid-item(5, 1);
+    @include zen-grid-item(8, 1);
+    @include mobile-only {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
+  }  
+  &.right_column {
+    @include zen-grid-item(8, 3);
+    @include mobile-only {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
   }
 }
 .main_full {
   @include zen-grid-item-base();
-  @include zen-grid-item(7, 1);
+  @include zen-grid-item(12, 1);
   @include zen-clear;
 }
 
 aside {
   @include zen-grid-item-base();
   &.right_column {
-    @include zen-grid-item(2, 6);
+    @include zen-grid-item(4, 9);
+    @include mobile-only {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
   }
   &.left_column {
-    @include zen-grid-item(2, 1);
+    @include zen-grid-item(4, 1);
+    @include mobile-only {
+      @include zen-clear();
+      @include zen-grid-item(12, 1);
+    }
   }
 }

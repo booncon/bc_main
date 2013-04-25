@@ -43,7 +43,6 @@
       <h2 class="main_slogan">[[*slogan]]</h2>
       <div class="header_pic" style="background-image: url('[[headerImage]]')"></div>
     </div>
-
     <div class="main-container content_section">
       <div class="main_full">
         <article>
@@ -52,19 +51,36 @@
             <p class="normal_text">
               [[*content_what]]
             </p>
-            <ul class="link_buttons">
-              <li class="pixels"><a href="http://pixels.booncon.com" target="_blank">booncon PIXELS</a></li>
-              <li class="rockets"><a href="http://rockets.booncon.com" target="_blank">booncon ROCKETS</a></li>
-            </ul>
           </section>
         </article>
       </div>
+      <div class="sub_container">
+        <div class="half_left">
+            <ul class="link_buttons">
+              <li class="pixels"><a href="http://pixels.booncon.com" target="_blank">booncon PIXELS</a></li>
+            </ul>
+        </div>
+        <div class="half_right">        
+            <ul class="link_buttons">
+              <li class="rockets"><a href="http://rockets.booncon.com" target="_blank">booncon ROCKETS</a></li>
+            </ul>
+        </div>
+      </div>  
     </div>
     <div class="main-container content_section">
       <div class="main_full">
         <article>
           <h1 id="how" class="section_title">[[*title_how]]</h1>
           <section>
+            <ul class="bc_stages">
+              <li class="stage"><img src="assets/img/bc_stages/booncon-draft_13.jpg" alt="stage 1"></li>
+              <li class="arrow"><img src="assets/img/bc_stages/booncon-draft_15.jpg" alt="stage 1"></li>
+              <li class="stage"><img src="assets/img/bc_stages/booncon-draft_17.jpg" alt="stage 2"></li>
+              <li class="arrow no-mobile"><img src="assets/img/bc_stages/booncon-draft_19.jpg" alt="stage 1"></li>
+              <li class="stage"><img src="assets/img/bc_stages/booncon-draft_21.jpg" alt="stage 3"></li>
+              <li class="arrow"><img src="assets/img/bc_stages/booncon-draft_23.jpg" alt="stage 1"></li>
+              <li class="stage"><img src="assets/img/bc_stages/booncon-draft_25.jpg" alt="stage 4"></li>
+            </ul>
             <p class="normal_text">
               [[*content_how]]
             </p>
@@ -98,7 +114,7 @@
         </article>        
       </div>
       <aside class="right_column time_wrap">
-        <div id="timeline"></div>
+        <div id="timeline" class="no-mobile"></div>
       </aside>    
     </div>
     <div class="main-container content_section">   
@@ -124,7 +140,7 @@
                   </div>
                 </div>
                 <br>
-                <a href="mailto:pixels@booncon.com" class="contact_link">hi@booncon.com</a>
+                <a href="mailto:hello@booncon.com" class="contact_link">hello@booncon.com</a>
                 <div class="contact_phone">+358 45 8980609</div>                 
                 <div class="contact_social">
                   <ul class="no-bullets">

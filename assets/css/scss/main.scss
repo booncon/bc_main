@@ -30,9 +30,10 @@
 
 $body_fonts: "ff-meta-web-pro", sans-serif;
 $title_fonts: "proxima-nova", sans-serif;
-$special_fonts: "ratio", sans-serif;
+$special_fonts: "proxima-nova", sans-serif;
 
 $tablet_font_resize: 0.9em;
+$mobile_font_resize: 0.9em;
 
 $color_body: #fff;
 $color_font: #333;
@@ -66,7 +67,7 @@ $fade_opacity: 0.7;
 
 @mixin line-overlay($z-index: 99) {
   &:after {
-    background: rgba(240,240,240,0.54) url(../gfx/stripe_white.png);
+    background: rgba(44,54,50,0.64) url(../gfx/stripe_white.png);
     content: ' ';
     width: 100%;
     height: 100%;
@@ -95,10 +96,6 @@ a {
   &:hover {
     @include transition(all $anim_dur_in);
   }
-  &:active {
-   // @include transform(scale(0.96) rotateX(10deg));
-    //@include transform-style(preserve-3d);
-  }
 }
 
 body {
@@ -109,6 +106,9 @@ body {
   -webkit-font-smoothing: antialiased;
   @include tablet-only {
     font-size: $tablet_font_resize;
+  }
+  @include mobile-only {
+    font-size: $mobile_font_resize;
   }
 }
 
@@ -147,7 +147,11 @@ body {
   .main_logo {
     height: 100%;
     padding: 0.1em 0;
-    float: left;    
+    float: left;
+    @include mobile-only {
+      float: none;
+      margin: 0 auto;
+    } 
   }
   .main_menu {
     float: right;
@@ -171,6 +175,11 @@ body {
       }
     }
   }
+  @include mobile-only {
+    .main_menu { 
+      display: none;
+    }
+  }  
   @include tablet-only {
     height: 3.6em;
     .main_menu ul { 
@@ -180,7 +189,10 @@ body {
   &.floating {
     @include tablet-only {
       display: none !important;
-    }  
+    }
+    @include mobile-only {
+      display: none !important;
+    }
     top: 0;
     height: 2.6em;
     display: none;
@@ -228,17 +240,21 @@ h2 {
   font-size: 1.2em;
 }
 
-
-
 .parallax_wrapper {
   &.welcome {
     @include line-overlay(4);
   }
-  height: 580px;
+  height: 360px;
+  @include desktop-big-only {
+    height: 480px;
+  }
   overflow: hidden;
   position: relative;
   @include tablet-only {
     height: 240px;
+  }
+  @include mobile-only {
+    height: 180px;
   }
 }
 
@@ -246,15 +262,23 @@ h2 {
   width: 100%;
   height: 100%;
   background-attachment: fixed;
-  position: absolute;
-  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.68;
+  @include tablet-only {
+    background-attachment: scroll;
+    @include background-size(cover);
+  }
+  @include mobile-only {
+    background-attachment: scroll;
+    @include background-size(cover);
+  } 
 }
 
 .main_slogan {
   width: 80%;
   margin: -6% -40%;
-  color: darken($color_bc, 10%);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-transform: uppercase;
   text-align: center;
   font-size: 3.6em;
   font-weight: 600;
@@ -263,9 +287,13 @@ h2 {
   position: absolute;
   left: 50%;
   top: 50%;
-  z-index: 5;
+  z-index: 8;
   @include tablet-only {
     font-size: 2.4em;
+  }  
+  @include mobile-only {
+    font-size: 1.6em;
+    top: 42%;
   }  
 }
 
@@ -274,7 +302,8 @@ h2 {
   @include clearfix;
   li {
     display: inline-block;    
-    height: 8em;
+    height: 6em;
+    width: 100%;
     margin: 0;
     padding: 0;
     float: left;    
@@ -294,7 +323,6 @@ h2 {
       }
     }
     &.pixels {
-      width: 50%;
       a {
         background-color: $color_bc_p;
         background-image: url(../gfx/logo_bc-pixels_invert.png);
@@ -303,7 +331,6 @@ h2 {
       }
     }
     &.rockets {
-      width: 50%;
       a {
         background-color: $color_bc_r;
         background-image: url(../gfx/logo_bc-rockets_invert.png);
@@ -311,15 +338,58 @@ h2 {
         background-repeat: no-repeat;        
       }
     }
-    &.jobs {
-      width: 100%;
-      height: 6em;
+    &.jobs {      
       a {
         background-color: $color_bc;
         background-image: url(../gfx/logo_bc-jobs_invert.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;      
       }
+    }
+  }
+}
+.bc-stages-img {
+  max-width: 96%;
+  margin: 1em auto 3.2em;
+}
+
+.bc_stages {
+  list-style: none;
+  @include clearfix;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  li {
+    @include desktop-big-only {
+      height: 220px;
+    }
+    height: 180px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    text-align: center;
+    @include tablet-only {
+      height: 140px;
+    }  
+    @include mobile-only {
+      height: 100px;
+      margin-bottom: 1.2em;
+    }
+    &.stage {
+      width: 20%;
+      @include mobile-only {
+        width: 42%;
+      }
+    }
+    &.arrow {
+      width: 6.5%;
+      @include mobile-only {
+        width: 6%;
+      }
+    }
+    img {
+      margin: 0 auto;
+      height: 100%;
     }
   }
 }
@@ -330,6 +400,12 @@ h2 {
   height: 150px;
   position: relative;
   font-size: .8em;
+  @include tablet-only {
+    width: 33.333%;
+  }
+  @include mobile-only {
+    width: 50%;
+  }  
   @include perspective(600px);
   cursor: pointer;
   margin-bottom: 10px;
@@ -389,6 +465,10 @@ h2 {
   float: left;
   margin: 0 3em 0 0;
   height: 8em;
+  @include mobile-only {
+    height: 6em;
+    margin: 0 1.2em 0 0;
+  }  
   a {
     &:hover {
       opacity: $fade_opacity;
@@ -409,6 +489,9 @@ h2 {
   .contact_wrap {
     padding: 40px 0;
     background-color: rgba(0,0,0,0.6);
+    @include mobile-only {
+      padding: 20px 0;
+    }  
   }
   .contact {
     @include clearfix;
@@ -420,6 +503,13 @@ h2 {
     text-align: right;
     font-weight: 600;
     line-height: 1.2;
+    @include tablet-only {
+      width: 86%;
+    }
+    @include mobile-only {
+      width: 96%;
+      font-size: 1.1em;
+    }
   }
   .contact_title {
     font-size: 1.8em;
@@ -483,7 +573,6 @@ h2 {
       color: #aaa;
       text-decoration: none;
     }
-
     .footer_symbol {
       font-size: 120%;
       color: lighten($color_bc, 60%);
@@ -502,7 +591,11 @@ h2 {
   @include icon-font;
 }
 
-
+.no-mobile {
+  @include mobile-only {
+    display: none;
+  }
+}
 
 svg {
   width: 100%;
@@ -555,7 +648,3 @@ path.arrow {
   position: absolute;
   height: 100%;
 }
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
