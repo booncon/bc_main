@@ -144,9 +144,9 @@
                 <div class="contact_phone">+358 45 8980609</div>                 
                 <div class="contact_social">
                   <ul class="no-bullets">
-                    <li class="contact_icon"><a href="https://www.facebook.com/booncon"><img src="assets/img/icon_facebook.svg" alt="Icon facebook" target="_blank">Facebook</a></li>
-                    <li class="contact_icon"><a href="https://twitter.com/booncon"><img src="assets/img/icon_twitter.svg" alt="Icon facebook" target="_blank">Twitter</a></li>
-                    <li class="contact_icon"><a href="http://www.linkedin.com/company/booncon"><img src="assets/img/icon_linked.svg" alt="Icon facebook" target="_blank">LinkedIn</a></li>
+                    <li class="contact_icon"><a href="https://www.facebook.com/booncon" target="_blank"><img src="assets/img/icon_facebook.svg" alt="Icon facebook" target="_blank">Facebook</a></li>
+                    <li class="contact_icon"><a href="https://twitter.com/booncon" target="_blank"><img src="assets/img/icon_twitter.svg" alt="Icon facebook" target="_blank">Twitter</a></li>
+                    <li class="contact_icon"><a href="http://www.linkedin.com/company/booncon" target="_blank"><img src="assets/img/icon_linked.svg" alt="Icon facebook" target="_blank">LinkedIn</a></li>
                   </ul>
                 </div>
                 <div class="contact_small">
