@@ -104,6 +104,7 @@ function parallaxScroll(scroll_pos) {
 }
 function initSmoothScroll() {
   $('.anchor_link').click(function () {
+    _gaq.push(['_trackPageview', '#'+$(this).attr('href')]);
     $.smoothScroll({
       scrollTarget: $(this).attr('href'),
       speed: 1200,
