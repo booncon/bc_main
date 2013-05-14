@@ -394,6 +394,27 @@ h2 {
   }
 }
 
+.inter_link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.1em 0.4em 0.2em;
+  margin: -0.1em 0 -0.2em;
+  &.bc_main {
+    background: $color_bc;
+  }
+  &.bc_pixels {
+    background: $color_bc_p;
+  }
+  &.bc_rockets {
+    background: $color_bc_r;
+  }
+  &:hover {
+    color: #fff;
+    opacity: $fade_opacity;
+  }
+}
+
 .panel {
   float: left;
   width: 25%;
@@ -537,6 +558,7 @@ h2 {
     float: right;
     margin-top: 1.2em;
     text-align: right;
+    font-weight: 400;
     @include clearfix;
   }
   .contact_social {
@@ -555,6 +577,7 @@ h2 {
         color: #fff;
         text-decoration: none;
         font-size: 0.9em;
+        font-weight: 400;
         img {
           vertical-align: middle;
           height: 2.2em;
