@@ -1,7 +1,8 @@
 @import "h5bp";
 @import "compass";
-@import "_media-queries";
-@import "_responsive_layout";
+@import "media-queries";
+@import "responsive_layout";
+@import "helia";
 
 @include h5bp-normalize;
 @include h5bp-base-styles;
@@ -29,8 +30,8 @@
    ========================================================================== */
 
 $body_fonts: "ff-meta-web-pro", sans-serif;
-$title_fonts: "proxima-nova", sans-serif;
-$special_fonts: "proxima-nova", sans-serif;
+$title_fonts: "Helia", sans-serif;
+$special_fonts: "Helia", sans-serif;
 
 $tablet_font_resize: 0.9em;
 $mobile_font_resize: 0.9em;
@@ -167,6 +168,7 @@ body {
           color: #111;          
           text-decoration: none;
           font-family: $title_fonts;
+          font-weight: 200;
           font-size: 1.2em;
           padding: 0.4em 0.8em;
           &:hover {
@@ -209,8 +211,11 @@ body {
     position: fixed;
     width: 100%;
     background-color: $color_bc;
-    z-index: 99;
+    z-index: 1001;
     @include transition(all 0.2s);
+    .main_logo {
+      height: 1.8em;
+    }
     .main_menu {      
       ul {
         margin-top: 0em;     
@@ -218,7 +223,8 @@ body {
           a {
             color: #fff;
             font-size: 1.2em;
-            padding: 0em 0.8em;
+            line-height: 1.8;
+            padding: 0.2em 0.8em;
           }
         }
       }
@@ -277,7 +283,7 @@ h2 {
 
 .main_slogan {
   width: 80%;
-  margin: -6% -40%;
+  margin: -0.48em -40%;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -419,7 +425,7 @@ h2 {
 .panel {
   float: left;
   width: 25%;
-  height: 150px;
+  height: 172px;
   position: relative;
   font-size: .8em;
   @include tablet-only {
@@ -439,6 +445,7 @@ h2 {
     width: 96%;
     height: 100%;
     background-position: center center;
+    background-repeat: no-repeat;
     @include transform(rotateX(0deg) rotateY(0deg));
     @include transform-style(preserve-3d);
     @include background-size(cover);
@@ -450,23 +457,39 @@ h2 {
     &.back {
       z-index: 800;
       @include transform(rotateY(-180deg));
-      .pad {    
-        position: absolute;
-        bottom: 4px;
-        background-color: #fff;
-        padding: 4px 8px 4px 0;
-        h2 {
-          padding: 0 0 2px;  
-          font-size: 14px;
-          line-height: 14px;
-          margin: 0;
-        }  
-        h3 {
+      .contact_detail {
+        font-weight: 500;
+        font-size: 0.88em;
+        a {
           padding: 0;
-          font-size: 12px;
-          line-height: 12px;
           margin: 0;
+          color: $color_font;
+          text-decoration: none;
+          &:hover {
+            color: $color_bc_p;
+          }
         }
+      }
+    }
+    .pad {
+      position: absolute;
+      bottom: 4px;
+      background-color: rgba(255,255,255,0.88);
+      padding: 4px 8px 4px 0;
+      h2 {
+        padding: 0 0 2px;  
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0;
+        font-weight: 500;
+      }  
+      h3 {
+        padding: 0;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 200;
+        margin: 0;
+        color: $color_font;
       }
     }
   }

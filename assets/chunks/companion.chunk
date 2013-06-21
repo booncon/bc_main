@@ -1,9 +1,14 @@
 <div class="hover panel">
-    <div class="front side" style="background-image: url([[+tv.companion_image_back]]);"></div>
-    <div class="back side" style="background-image: url([[+tv.companion_image_front]]);">
-        <div class="pad">
-            <h2>[[+pagetitle]]</h2>
-            <h3>[[+description]]<h3>
-        </div>
+    <div class="front side" style="background-image: url([[+tv.companion_image_back]]);">
+      <div class="pad">
+          <h2>[[+pagetitle]]</h2>
+          <h3>[[+description]]<h3>
+      </div>
+    </div>
+    <div class="back side" style="background-image: url([[+tv.companion_image_front]]);">        
+          <div class="pad">
+              [[+tv.companion_phone:notempty=`<div class="contact_detail">[[+tv.companion_phone]]</div>`]]
+              [[+tv.companion_contact:notempty=`<div class="contact_detail"><a href="mailto:[[+tv.companion_contact]]">[[+tv.companion_contact]]</a></div>`]]
+          </div>
     </div>
 </div>
