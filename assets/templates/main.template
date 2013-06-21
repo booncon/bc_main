@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <base href="[[!++site_url]]" />  
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1">
     <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script type="text/javascript" src="//use.typekit.net/ong3eiq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
