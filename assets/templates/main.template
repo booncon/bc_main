@@ -141,7 +141,8 @@
                 </div>
                 <br>
                 <a href="mailto:hello@booncon.com" class="contact_link">hello@booncon.com</a>
-                <div class="contact_phone">+358 40 8200522</div>                 
+                <div class="contact_phone">+358 40 8200522</div><br>
+                <a class="contact_link" target="_blank" href="http://blog.booncon.com">boonconic blog</a>             
                 <div class="contact_social">
                   <ul class="no-bullets">
                     <li class="contact_icon"><a href="https://www.facebook.com/booncon" target="_blank"><img src="assets/img/icon_facebook.svg" alt="Icon facebook" target="_blank">Facebook</a></li>
