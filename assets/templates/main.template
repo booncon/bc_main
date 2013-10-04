@@ -109,8 +109,8 @@
     <div class="main-container content_section story_container">      
       <div class="main left_column">
         <h1 id="history" class="section_title">[[*title_history]]</h1>    
-        <article class="story_text">       
-          [[*content_history]]         
+        <article class="story_text normal_text">     
+          [[*content_history:markdownOF]]         
         </article>        
       </div>
       <aside class="right_column time_wrap">

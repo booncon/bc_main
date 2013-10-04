@@ -1,0 +1,72 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '11633eb7815fbe8b14ca953f57f84fef' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":1,"property_preprocess":0,"name":"markdownOF","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * mardownOF\\n *\\n * An output filter for parsing Markdown into HTML\\n *\\n * @author Jay Gilmore\\n * @copyright Copyright 2013, Jay Gilmore\\n *\\n * PHP Markdown  \\n * Copyright (c) 2004-2013 Michel Fortin  \\n * <http:\\/\\/michelf.ca\\/projects\\/php-markdown\\/>\\n *\\n * Original Markdown  \\n * Copyright (c) 2004-2006 John Gruber  \\n * <http:\\/\\/daringfireball.net\\/projects\\/markdown\\/>\\n *\\n * USAGE\\n * [[*content:markdownOF]]\\n *\\n**\\/\\nrequire_once $modx->getOption(\'core_path\').\'components\\/markdownOF\\/markdown.php\';\\n\\n# Get and pass content through the parser\\n$html = Markdown($input);\\n\\n# Output parsed content\\n\\nreturn $html;","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * mardownOF\\n *\\n * An output filter for parsing Markdown into HTML\\n *\\n * @author Jay Gilmore\\n * @copyright Copyright 2013, Jay Gilmore\\n *\\n * PHP Markdown  \\n * Copyright (c) 2004-2013 Michel Fortin  \\n * <http:\\/\\/michelf.ca\\/projects\\/php-markdown\\/>\\n *\\n * Original Markdown  \\n * Copyright (c) 2004-2006 John Gruber  \\n * <http:\\/\\/daringfireball.net\\/projects\\/markdown\\/>\\n *\\n * USAGE\\n * [[*content:markdownOF]]\\n *\\n**\\/\\nrequire_once $modx->getOption(\'core_path\').\'components\\/markdownOF\\/markdown.php\';\\n\\n# Get and pass content through the parser\\n$html = Markdown($input);\\n\\n# Output parsed content\\n\\nreturn $html;"}',
+        'guid' => 'b8c5299fb6cfbe294f8edcf5adcad06e',
+        'native_key' => 1,
+        'signature' => 'd78ca61c6d91417584e61da06e06344f',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'markdownof',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"markdownof-1.0.0-alpha1\\/modCategory\\/a81ab8cee78f701abb9b398fb1235bda\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"markdownOF"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"markdownof-1.0.0-alpha1\\/modCategory\\/a81ab8cee78f701abb9b398fb1235bda\\/1\\/","target":"return \\"\\".MODX_CORE_PATH.\\"components\\/\\";","name":"markdownOF"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cdba43a0ec2263cb34081b41cfcd307b',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'a81ab8cee78f701abb9b398fb1235bda',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"markdownOF"}',
+);
