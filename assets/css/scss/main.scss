@@ -524,6 +524,7 @@ h2 {
   background-image: url(../gfx/Helsinki.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  @include background-size(cover);
   position: relative;
   border-top: 1px solid #888;
   margin-top: 2em;
