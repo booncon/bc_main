@@ -1,4 +1,7 @@
 <?php
+//session_cache_limiter('');
+//header("Cache-Control: public, s-maxage=86400");
+
 /*
  * MODX Revolution
  *
